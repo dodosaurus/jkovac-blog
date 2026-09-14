@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     canonical: "/",
     languages: { sk: "/", en: "/en" },
   },
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: [{ url: "/favicon.svg?v=2", type: "image/svg+xml" }] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -27,4 +27,3 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
-
