@@ -7,6 +7,7 @@ import {
 } from "@/lib/articles";
 import { copy, localizePath, type Locale } from "@/lib/i18n";
 import { ArticleMarkdown } from "@/components/article-markdown";
+import { ArticleToc } from "@/components/article-toc";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -35,16 +36,7 @@ export function ArticlePage({ article, locale }: { article: Article; locale: Loc
         </header>
 
         <div className="article-shell article-layout">
-          <aside className="toc" aria-labelledby="contents-title">
-            <h2 id="contents-title">{text.contents}</h2>
-            <ol>
-              {article.headings[locale].map((heading) => (
-                <li key={heading.id}>
-                  <a href={`#${heading.id}`}>{heading.title}</a>
-                </li>
-              ))}
-            </ol>
-          </aside>
+          <ArticleToc headings={article.headings[locale]} title={text.contents} />
           <div>
             <p className="article-note">{text.translationNote}</p>
             <ArticleMarkdown body={article.body[locale]} />
@@ -58,4 +50,3 @@ export function ArticlePage({ article, locale }: { article: Article; locale: Loc
     </>
   );
 }
-
