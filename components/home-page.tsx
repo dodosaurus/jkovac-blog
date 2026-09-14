@@ -53,7 +53,7 @@ export function HomePage({ locale }: { locale: Locale }) {
                 alt={locale === "sk" ? "Portrét Jozefa Kováča" : "Portrait of Jozef Kováč"}
                 fill
                 priority
-                sizes="(max-width: 780px) 100vw, 30vw"
+                sizes="(max-width: 780px) 128px, 160px"
                 src="/jozef-kovac.jpg"
               />
             </div>

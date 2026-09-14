@@ -189,7 +189,7 @@ a {
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(15rem, 0.75fr);
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: clamp(2rem, 7vw, 6rem);
   align-items: center;
 }
@@ -212,14 +212,18 @@ a {
 
 .portrait-frame {
   position: relative;
-  aspect-ratio: 4 / 5;
+  width: clamp(8rem, 12vw, 10rem);
+  aspect-ratio: 1;
   overflow: hidden;
+  justify-self: end;
+  border-radius: 50%;
   background: var(--surface);
 }
 
 .portrait-frame::after {
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   border: 1px solid rgba(255, 255, 255, 0.12);
   content: "";
   pointer-events: none;
@@ -459,8 +463,9 @@ a {
   }
 
   .portrait-frame {
-    width: min(100%, 24rem);
+    width: 8rem;
     order: -1;
+    justify-self: start;
   }
 
   .article-header-copy h1 {
