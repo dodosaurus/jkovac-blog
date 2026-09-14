@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   articleExcerpt,
@@ -17,7 +16,7 @@ export function HomePage({ locale }: { locale: Locale }) {
   return (
     <>
       <a className="skip-link" href="#main">{text.skip}</a>
-      <SiteHeader locale={locale} alternatePath={locale === "sk" ? "/en" : "/"} />
+      <SiteHeader locale={locale} alternatePath={locale === "sk" ? "/en" : "/"} currentPath="/" />
       <main id="main">
         <section className="shell articles-section" id="clanky" aria-label={text.articles}>
           <div className="article-list">
@@ -41,24 +40,6 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
         </section>
 
-        <section className="shell home-section" id="o-mne" aria-labelledby="about-title">
-          <p className="section-kicker">{text.aboutKicker}</p>
-          <div className="about-grid">
-            <div className="about-copy">
-              <h2 id="about-title">{text.aboutTitle}</h2>
-              <p>{text.aboutBody}</p>
-            </div>
-            <div className="portrait-frame">
-              <Image
-                alt={locale === "sk" ? "Portrét Jozefa Kováča" : "Portrait of Jozef Kováč"}
-                fill
-                priority
-                sizes="(max-width: 780px) 128px, 160px"
-                src="/jozef-kovac.jpg"
-              />
-            </div>
-          </div>
-        </section>
       </main>
       <SiteFooter locale={locale} />
     </>

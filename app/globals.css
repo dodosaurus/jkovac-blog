@@ -97,6 +97,7 @@ a {
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
+.site-nav a[aria-current="page"],
 .locale-nav a:hover,
 .locale-nav a:focus-visible {
   color: var(--ink);
@@ -128,7 +129,7 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
-.home-section {
+.about-section {
   display: grid;
   grid-template-columns: minmax(8rem, 0.7fr) minmax(0, 2.3fr);
   gap: clamp(2rem, 7vw, 7rem);
@@ -194,7 +195,7 @@ a {
   align-items: center;
 }
 
-.about-copy h2 {
+.about-copy h1 {
   max-width: 18ch;
   margin: 0 0 1.5rem;
   font-size: clamp(1.8rem, 4vw, 3.5rem);
@@ -448,11 +449,7 @@ a {
     min-height: 4.5rem;
   }
 
-  .site-nav {
-    display: none;
-  }
-
-  .home-section,
+  .about-section,
   .article-header,
   .article-layout {
     grid-template-columns: 1fr;

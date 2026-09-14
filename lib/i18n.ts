@@ -10,7 +10,7 @@ export const copy = {
     aboutKicker: "O mne",
     aboutTitle: "Softvérový inžinier a farmaceut.",
     aboutBody:
-      "Som PharmDr. Jozef Kováč. Zaujíma ma, ako prakticky prepájať softvér, umelú inteligenciu a odbornú prácu — bez zbytočného hluku a bez straty ľudského úsudku.",
+      "Looking for next big thing since I was born. I still haven't found it.",
     footer: "Písané a tvorené na Východe Slovenska.",
     contents: "Obsah",
     back: "Späť na všetky články",
@@ -25,7 +25,7 @@ export const copy = {
     aboutKicker: "About",
     aboutTitle: "Software engineer and pharmacist.",
     aboutBody:
-      "I am PharmDr. Jozef Kováč. I am interested in practical ways to connect software, artificial intelligence and professional work — without noise and without giving up human judgement.",
+      "Looking for next big thing since I was born. I still haven't found it.",
     footer: "Written and built in Eastern Slovakia.",
     contents: "Contents",
     back: "Back to all articles",

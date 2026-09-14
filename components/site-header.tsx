@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { copy, localizePath, type Locale } from "@/lib/i18n";
 
-export function SiteHeader({ locale, alternatePath }: { locale: Locale; alternatePath: string }) {
+export function SiteHeader({
+  locale,
+  alternatePath,
+  currentPath,
+}: {
+  locale: Locale;
+  alternatePath: string;
+  currentPath?: "/" | "/about";
+}) {
   const text = copy[locale];
 
   return (
@@ -12,8 +20,12 @@ export function SiteHeader({ locale, alternatePath }: { locale: Locale; alternat
       </Link>
       <div className="header-right">
         <nav className="site-nav" aria-label={locale === "sk" ? "Hlavná navigácia" : "Main navigation"}>
-          <Link href={`${localizePath(locale, "/")}#clanky`}>{text.articles}</Link>
-          <Link href={`${localizePath(locale, "/")}#o-mne`}>{text.about}</Link>
+          <Link aria-current={currentPath === "/" ? "page" : undefined} href={`${localizePath(locale, "/")}#clanky`}>
+            {text.articles}
+          </Link>
+          <Link aria-current={currentPath === "/about" ? "page" : undefined} href={localizePath(locale, "/about")}>
+            {text.about}
+          </Link>
         </nav>
         <nav className="locale-nav" aria-label={locale === "sk" ? "Jazyk" : "Language"}>
           <Link href={locale === "sk" ? alternatePath : alternatePath.replace(/^\/en/, "") || "/"}>
@@ -24,4 +36,3 @@ export function SiteHeader({ locale, alternatePath }: { locale: Locale; alternat
     </header>
   );
 }
-

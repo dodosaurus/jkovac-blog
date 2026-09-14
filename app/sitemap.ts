@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages: MetadataRoute.Sitemap = [
     { url: ORIGIN, changeFrequency: "weekly", priority: 1 },
     { url: `${ORIGIN}/en`, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${ORIGIN}/about`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${ORIGIN}/en/about`, changeFrequency: "monthly", priority: 0.4 },
   ];
 
   for (const article of getPublishedArticles()) {
