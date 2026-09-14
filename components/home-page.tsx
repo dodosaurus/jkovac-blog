@@ -19,15 +19,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       <a className="skip-link" href="#main">{text.skip}</a>
       <SiteHeader locale={locale} alternatePath={locale === "sk" ? "/en" : "/"} />
       <main id="main">
-        <section className="shell hero" aria-labelledby="hero-title">
-          <div>
-            <p className="hero-kicker">{text.heroKicker}</p>
-            <h1 id="hero-title">{text.heroTitle}</h1>
-          </div>
-        </section>
-
-        <section className="shell home-section" id="clanky" aria-labelledby="articles-title">
-          <p className="section-kicker" id="articles-title">{text.latest}</p>
+        <section className="shell articles-section" id="clanky" aria-label={text.articles}>
           <div className="article-list">
             {articles.map((article) => (
               <Link
@@ -72,4 +64,3 @@ export function HomePage({ locale }: { locale: Locale }) {
     </>
   );
 }
-
