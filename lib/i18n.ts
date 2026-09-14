@@ -8,10 +8,10 @@ export const copy = {
     read: "Čítať článok",
     minutes: "min čítania",
     aboutKicker: "O mne",
-    aboutTitle: "Softvérový inžinier a farmaceut.",
+    aboutTitle: "Softvérový inžinier a farmaceut",
     aboutBody:
       "Looking for next big thing since I was born. I still haven't found it.",
-    footer: "Písané a tvorené na Východe Slovenska.",
+    footer: "Písané a zverejňované na Východe Slovenska. EN preklady robí AI, SK verzie sú vyťukávané človekom.",
     contents: "Obsah",
     back: "Späť na všetky články",
     translationNote: "Pôvodný text bol napísaný v slovenčine.",

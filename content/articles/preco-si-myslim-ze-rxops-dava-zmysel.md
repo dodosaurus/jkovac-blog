@@ -1,13 +1,13 @@
 ---
 schema: 1
-slug: preco-si-myslim-ze-tento-projekt-dava-zmysel
+slug: preco-si-myslim-ze-rxops-dava-zmysel
 published: true
 featured: true
 published_at: "2026-09-05"
 updated_at: "2026-09-05"
 author: PharmDr. Jozef Kováč
-title_sk: Prečo si myslím, že tento projekt dáva zmysel
-title_en: Why I think this project makes sense
+title_sk: Prečo si myslím, že RxOps dáva zmysel
+title_en: Why I think RxOps makes sense
 excerpt_sk: Cesta od prvých prototypov k RxOps a úvaha o tom, kde môže AI priniesť farmaceutovi skutočnú hodnotu.
 excerpt_en: The journey from early prototypes to RxOps, and a reflection on where AI can bring real value to pharmacists.
 category_sk: Projekty
@@ -24,7 +24,9 @@ source_locale: sk
 translation_en: ai-assisted
 ---
 
-Možno si poviete, že tento projekt vznikol ako výsledok jedného večera a nejakého „brainstormingu“ s AI agentom. Pokiaľ ide o spôsob, nie ste ďaleko od pravdy. Časovo to však zďaleka nesedí. Cesta k tomuto bodu bola dlhá a skúšal som rôzne veci. Súčasná podoba RxOps je výsledkom viacerých prototypov a dlhého premýšľania nad tým, čo dáva zmysel a do čoho investovať svoj drahocenný čas.
+Možno si poviete, že RxOps projekt vznikol ako výsledok jedného večera a nejakého „brainstormingu“ s AI agentom. Pokiaľ ide o spôsob, nie ste ďaleko od pravdy. Časovo to však zďaleka nesedí. Cesta k tomuto bodu bola dlhá a skúšal som rôzne veci. Súčasná podoba RxOps je výsledkom viacerých prototypov a dlhého premýšľania nad tým, čo dáva zmysel a do čoho investovať svoj drahocenný čas.
+
+[RxOps - development verzia](https://rxops.vercel.app/)
 
 # Nápad
 
@@ -133,15 +135,17 @@ Poskytujem nástroj na prípravu kvalitného promptu pre AI a priestor, kde vzni
 
 Predpokladám a zdôrazňujem, že konečnú podobu výsledku má v plnej moci zadávateľ. On je zodpovedný. Všetky karty dostáva do rúk. Podľa mňa sa aj pri vývoji s AI dosahujú najlepšie výsledky vtedy, keď profesionál využije AI na rozšírenie svojich schopností a nevzdá sa kontroly. A toto chcem priniesť aj v RxOps.
 
-# Vízia
+# Vízia pre RxOps
 
 Smerovanie produktu sa bude určite meniť. Ukazuje mi to vývoj projektu za posledné mesiace aj to, ako rýchlo sa menia možnosti a dostupnosť AI nástrojov.
 
-Vízia si určite zaslúži osobitný blogový článok, ktorý napíšem neskôr. V skratke by však malo ísť o projekt, ktorý farmáciu vylepší, a nie zmení. Moja túžba je, aby RxOps vylepšoval to, čo je v lekárni také cenné – priamy osobný kontakt pacienta s odborníkom. Je jedno, že prenosová kapacita obyčajnej ľudskej komunikácie nikdy nedosiahne rýchlosť, akou komunikujú počítače. Takáto komunikácia však v sebe nesie niečo hlbšie, čo sa ťažko pomenúva – možno empatiu, súcit či dobroprajnosť. Aj to môže popri vydaných liekoch prispieť k úspechu predpísanej farmakoterapie.
+V skratke by však malo ísť o projekt, ktorý farmáciu vylepší, a nie zmení. Moja túžba je, aby RxOps vylepšoval to, čo je v lekárni také cenné – priamy osobný kontakt pacienta s odborníkom. Je jedno, že prenosová kapacita obyčajnej ľudskej komunikácie nikdy nedosiahne rýchlosť, akou komunikujú počítače. Takáto komunikácia však v sebe nesie niečo hlbšie, čo sa ťažko pomenúva – možno empatiu, súcit či dobroprajnosť. Aj to môže popri vydaných liekoch prispieť k úspechu predpísanej farmakoterapie.
 
 <!-- language:en -->
 
 You might assume that this project came out of a single evening and some “brainstorming” with an AI agent. In terms of the method, you would not be far from the truth. In terms of time, however, that would be very wide of the mark. The journey to this point was long, and I tried many different things. The current form of RxOps is the result of several prototypes and a great deal of thought about what makes sense and where to invest my precious time.
+
+[RxOps - development version](https://rxops.vercel.app/)
 
 # The idea
 
