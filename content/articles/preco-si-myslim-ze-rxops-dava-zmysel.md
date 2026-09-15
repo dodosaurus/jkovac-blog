@@ -5,7 +5,7 @@ published: true
 featured: true
 published_at: "2026-09-05"
 updated_at: "2026-09-05"
-author: PharmDr. Jozef Kováč
+author: Jozef Kováč
 title_sk: Prečo si myslím, že RxOps dáva zmysel
 title_en: Why I think RxOps makes sense
 excerpt_sk: Cesta od prvých prototypov k RxOps a úvaha o tom, kde môže AI priniesť farmaceutovi skutočnú hodnotu.
