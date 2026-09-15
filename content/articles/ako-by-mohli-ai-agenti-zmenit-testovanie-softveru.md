@@ -6,8 +6,8 @@ featured: false
 published_at: "2026-09-15"
 updated_at: "2026-09-15"
 author: Jozef Kováč
-title_sk: Ako by mohli AI agenti zmeniť testovanie softvéru
-title_en: How AI agents could change software testing
+title_sk: Tím AI agentov na pokrytie celého testing stacku
+title_en: Team of AI agents to cover whole testing stack
 excerpt_sk: Úvaha o tom, ako môžu špecializovaní AI agenti priebežne vytvárať, vykonávať a spravovať testy softvéru.
 excerpt_en: A reflection on how specialized AI agents could continuously create, run, and manage software tests.
 category_sk: Technológie
@@ -21,7 +21,7 @@ source_locale: sk
 translation_en: ai-assisted
 ---
 
-Keď vidím, ako dobre si AI agenti počínajú už dnes, a keďže je často lepšie zadať úlohu voľnejšie a nechať agenta, aby navrhol riešenie podľa seba, núti ma to premýšľať nad tým, čo to v súčasnosti znamená pre testovanie softvéru. Rád by som rozobral niekoľko bodov, ktoré z tohto pozorovania vychádzajú, a potom predstavil jeden projekt – riešenie testovania, ktoré by sa dnes (v septembri 2026) dalo zaujímavo využiť.
+Keď vidím, ako dobre si AI agenti počínajú už dnes, a keďže je často lepšie zadať úlohu voľnejšie a nechať agenta, aby navrhol riešenie podľa seba, núti ma to premýšľať nad tým, čo to v súčasnosti znamená pre testovanie softvéru. Rád by som rozobral niekoľko bodov, ktoré z tohto pozorovania vychádzajú, a potom predstavil jednu ideu – riešenie testovania, ktoré by sa dnes (v septembri 2026) dalo zaujímavo využiť.
 
 # Keď kód generujú, nech ho aj testujú
 
