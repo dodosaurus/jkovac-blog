@@ -6,8 +6,8 @@ featured: false
 published_at: "2026-09-15"
 updated_at: "2026-09-15"
 author: Jozef Kováč
-title_sk: Tím AI agentov na pokrytie celého testing stacku
-title_en: Team of AI agents to cover whole testing stack
+title_sk: Tím testing AI agentov
+title_en: Team of testing AI agents
 excerpt_sk: Úvaha o tom, ako môžu špecializovaní AI agenti priebežne vytvárať, vykonávať a spravovať testy softvéru.
 excerpt_en: A reflection on how specialized AI agents could continuously create, run, and manage software tests.
 category_sk: Technológie
