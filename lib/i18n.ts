@@ -11,7 +11,7 @@ export const copy = {
     aboutTitle: "Softvérový inžinier a farmaceut",
     aboutBody:
       "Looking for next big thing since I was born. I still haven't found it.",
-    footer: "Písané a zverejňované na Východe Slovenska. EN preklady robí AI, SK verzie sú vyťukávané človekom.",
+    footer: "Písané a zverejňované na Východe Slovenska.",
     contents: "Obsah",
     back: "Späť na všetky články",
     translationNote: "Pôvodný text bol napísaný v slovenčine.",
@@ -26,7 +26,7 @@ export const copy = {
     aboutTitle: "Software engineer and pharmacist.",
     aboutBody:
       "Looking for next big thing since I was born. I still haven't found it.",
-    footer: "Written and built in Eastern Slovakia.",
+    footer: "Written and built in Eastern Slovakia. English translations are done by AI; the Slovak versions are typed out by a human.",
     contents: "Contents",
     back: "Back to all articles",
     translationNote:
