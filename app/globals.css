@@ -74,12 +74,6 @@ a {
   letter-spacing: -0.08em;
 }
 
-.wordmark-name {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-}
-
 .site-nav,
 .locale-nav {
   display: flex;
@@ -211,6 +205,37 @@ a {
   font-size: clamp(1rem, 1.5vw, 1.12rem);
 }
 
+.about-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 2rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.about-social-link:hover,
+.about-social-link:focus-visible {
+  border-color: var(--muted);
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.about-social-link svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.about-social-arrow {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .portrait-frame {
   position: relative;
   width: clamp(8rem, 12vw, 10rem);
@@ -241,9 +266,10 @@ a {
   display: flex;
   min-height: 8rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   color: var(--quiet);
   font-size: 0.72rem;
+  text-align: right;
 }
 
 .site-footer a {

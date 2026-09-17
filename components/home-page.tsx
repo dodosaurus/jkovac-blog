@@ -8,6 +8,7 @@ import {
 import { copy, localizePath, type Locale } from "@/lib/i18n";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { jsonLd, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 export function HomePage({ locale }: { locale: Locale }) {
   const text = copy[locale];
@@ -15,6 +16,19 @@ export function HomePage({ locale }: { locale: Locale }) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": `${SITE_URL}/#website`,
+            name: SITE_NAME,
+            url: `${SITE_URL}/`,
+            inLanguage: ["sk", "en"],
+          }),
+        }}
+      />
       <a className="skip-link" href="#main">{text.skip}</a>
       <SiteHeader locale={locale} alternatePath={locale === "sk" ? "/en" : "/"} currentPath="/" />
       <main id="main">

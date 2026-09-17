@@ -14,9 +14,8 @@ export function SiteHeader({
 
   return (
     <header className="shell site-header">
-      <Link className="wordmark" href={localizePath(locale, "/")} aria-label="Jozef Kováč — domov">
+      <Link className="wordmark" href={localizePath(locale, "/")} aria-label={locale === "sk" ? "Domov" : "Home"}>
         <span className="wordmark-mark" aria-hidden="true">JK</span>
-        <span className="wordmark-name">Jozef Kováč</span>
       </Link>
       <div className="header-right">
         <nav className="site-nav" aria-label={locale === "sk" ? "Hlavná navigácia" : "Main navigation"}>

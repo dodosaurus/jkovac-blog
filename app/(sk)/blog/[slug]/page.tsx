@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticlePage } from "@/components/article-page";
 import { articleExcerpt, articleTitle, getArticle, getPublishedArticles } from "@/lib/articles";
+import { articlePath, pageMetadata } from "@/lib/seo";
 
 export const dynamicParams = false;
 
@@ -14,14 +15,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = getArticle(slug);
   if (!article) return {};
 
-  return {
+  return pageMetadata({
+    locale: "sk",
+    path: articlePath(article),
     title: articleTitle(article, "sk"),
     description: articleExcerpt(article, "sk"),
-    alternates: {
-      canonical: article.canonical_path,
-      languages: { sk: article.canonical_path, en: `/en${article.canonical_path}` },
-    },
-  };
+    article,
+  });
 }
 
 export default async function SlovakArticlePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -30,4 +30,3 @@ export default async function SlovakArticlePage({ params }: { params: Promise<{ 
   if (!article) notFound();
   return <ArticlePage article={article} locale="sk" />;
 }
-

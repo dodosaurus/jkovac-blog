@@ -19,7 +19,7 @@ tags:
 cover_image: /blog-assets/rxops-journey/materiamedica1.png
 cover_alt_sk: Úvodná obrazovka prototypu Materia Medica
 cover_alt_en: Opening screen of the Materia Medica prototype
-canonical_path: /blog/preco-si-myslim-ze-tento-projekt-dava-zmysel
+canonical_path: /blog/preco-si-myslim-ze-rxops-dava-zmysel
 source_locale: sk
 translation_en: ai-assisted
 ---

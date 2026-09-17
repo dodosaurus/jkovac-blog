@@ -10,14 +10,36 @@ import { ArticleMarkdown } from "@/components/article-markdown";
 import { ArticleToc } from "@/components/article-toc";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { absoluteUrl, jsonLd, SITE_URL } from "@/lib/seo";
 
 export function ArticlePage({ article, locale }: { article: Article; locale: Locale }) {
   const text = copy[locale];
   const articlePath = `/blog/${article.slug}`;
   const alternatePath = locale === "sk" ? `/en${articlePath}` : articlePath;
+  const url = absoluteUrl(locale === "sk" ? articlePath : `/en${articlePath}`);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "@id": `${url}#article`,
+            headline: articleTitle(article, locale),
+            description: articleExcerpt(article, locale),
+            url,
+            mainEntityOfPage: { "@type": "WebPage", "@id": url },
+            datePublished: article.published_at,
+            dateModified: article.updated_at,
+            inLanguage: locale,
+            author: { "@type": "Person", name: article.author, url: `${SITE_URL}/about/` },
+            publisher: { "@type": "Person", name: article.author, url: `${SITE_URL}/about/` },
+            ...(article.cover_image ? { image: `${SITE_URL}${article.cover_image}` } : {}),
+          }),
+        }}
+      />
       <a className="skip-link" href="#article">{text.skip}</a>
       <SiteHeader locale={locale} alternatePath={alternatePath} />
       <main id="article">

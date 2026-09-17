@@ -78,6 +78,10 @@ function parseFrontmatter(data: Record<string, unknown>): ArticleFrontmatter {
     throw new Error('Article frontmatter field "translation_en" is invalid.');
   }
 
+  if (data.canonical_path !== `/blog/${data.slug}`) {
+    throw new Error(`Article ${data.slug} canonical_path must match its published URL /blog/${data.slug}.`);
+  }
+
   return data as ArticleFrontmatter;
 }
 
