@@ -14,9 +14,8 @@ category_sk: Projekty
 category_en: Projects
 tags:
   - AI
-  - farmácia
+  - pharma
   - RxOps
-  - užívanie liekov
 canonical_path: /blog/dosage-schedule-ako-osobitny-projekt
 source_locale: sk
 translation_en: ai-assisted

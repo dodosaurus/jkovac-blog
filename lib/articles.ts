@@ -35,6 +35,8 @@ export type Article = ArticleFrontmatter & {
   headings: Record<Locale, Array<{ id: string; title: string }>>;
 };
 
+export type ArticleSummary = Omit<Article, "body" | "headings">;
+
 function assertString(value: unknown, field: string): asserts value is string {
   if (typeof value !== "string" || value.trim() === "") {
     throw new Error(`Article frontmatter field \"${field}\" must be a non-empty string.`);
@@ -118,9 +120,15 @@ function readingMinutes(markdown: string) {
   return Math.max(1, Math.ceil(words / 210));
 }
 
-function readArticleFile(filename: string): Article {
+function readPublishedArticleFile(filename: string): Article | undefined {
   const raw = fs.readFileSync(path.join(ARTICLES_DIRECTORY, filename), "utf8");
   const parsed = matter(raw);
+
+  // Plain Markdown files and incomplete drafts may live next to published
+  // articles while they are being written. Validate only explicitly
+  // published content so those drafts cannot take the public site down.
+  if (parsed.data.published !== true) return undefined;
+
   const frontmatter = parseFrontmatter(parsed.data);
   const [skBody, enBody] = parsed.content.split(LANGUAGE_MARKER);
 
@@ -150,8 +158,8 @@ export function getPublishedArticles() {
   return fs
     .readdirSync(ARTICLES_DIRECTORY)
     .filter((filename) => filename.endsWith(".md") && filename.toLowerCase() !== "readme.md")
-    .map(readArticleFile)
-    .filter((article) => article.published)
+    .map(readPublishedArticleFile)
+    .filter((article): article is Article => article !== undefined)
     .sort((a, b) => b.published_at.localeCompare(a.published_at));
 }
 
@@ -159,19 +167,7 @@ export function getArticle(slug: string) {
   return getPublishedArticles().find((article) => article.slug === slug);
 }
 
-export function articleTitle(article: Article, locale: Locale) {
-  return locale === "sk" ? article.title_sk : article.title_en;
-}
-
-export function articleExcerpt(article: Article, locale: Locale) {
-  return locale === "sk" ? article.excerpt_sk : article.excerpt_en;
-}
-
-export function formatArticleDate(date: string, locale: Locale) {
-  return new Intl.DateTimeFormat(locale === "sk" ? "sk-SK" : "en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${date}T00:00:00Z`));
+export function articleSummary(article: Article): ArticleSummary {
+  const { body: _body, headings: _headings, ...summary } = article;
+  return summary;
 }

@@ -3,8 +3,8 @@ import {
   articleExcerpt,
   articleTitle,
   formatArticleDate,
-  type Article,
-} from "@/lib/articles";
+} from "@/lib/article-display";
+import type { Article } from "@/lib/articles";
 import { copy, localizePath, type Locale } from "@/lib/i18n";
 import { ArticleMarkdown } from "@/components/article-markdown";
 import { ArticleToc } from "@/components/article-toc";
@@ -54,6 +54,17 @@ export function ArticlePage({ article, locale }: { article: Article; locale: Loc
             <p className="eyebrow">{locale === "sk" ? article.category_sk : article.category_en}</p>
             <h1>{articleTitle(article, locale)}</h1>
             <p className="article-dek">{articleExcerpt(article, locale)}</p>
+            <div className="article-tags article-header-tags" aria-label={text.articleTags}>
+              {article.tags.map((tag) => (
+                <Link
+                  className="tag"
+                  href={`${localizePath(locale, "/")}?tag=${encodeURIComponent(tag)}#clanky`}
+                  key={tag}
+                >
+                  {tag}
+                </Link>
+              ))}
+            </div>
           </div>
         </header>
 

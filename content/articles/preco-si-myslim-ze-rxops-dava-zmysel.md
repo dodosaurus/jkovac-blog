@@ -14,7 +14,7 @@ category_sk: Projekty
 category_en: Projects
 tags:
   - AI
-  - farmácia
+  - pharma
   - RxOps
 cover_image: /blog-assets/rxops-journey/materiamedica1.png
 cover_alt_sk: Úvodná obrazovka prototypu Materia Medica

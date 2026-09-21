@@ -14,8 +14,7 @@ category_sk: Technológie
 category_en: Technology
 tags:
   - AI
-  - testovanie softvéru
-  - softvérový vývoj
+  - QA
 canonical_path: /blog/ako-by-mohli-ai-agenti-zmenit-testovanie-softveru
 source_locale: sk
 translation_en: ai-assisted

@@ -14,6 +14,10 @@ export const copy = {
     footer: "Písané a zverejňované na Východe Slovenska.",
     contents: "Obsah",
     back: "Späť na všetky články",
+    articleTags: "Tagy článku",
+    articleFilter: "Filter článkov",
+    filterByTag: "Filtrovať podľa tagu",
+    allArticles: "Všetky",
     translationNote: "Pôvodný text bol napísaný v slovenčine.",
   },
   en: {
@@ -29,6 +33,10 @@ export const copy = {
     footer: "Written and built in Eastern Slovakia. English translations are done by AI; the Slovak versions are typed out by a human.",
     contents: "Contents",
     back: "Back to all articles",
+    articleTags: "Article tags",
+    articleFilter: "Article filter",
+    filterByTag: "Filter by tag",
+    allArticles: "All",
     translationNote:
       "I wrote the original in Slovak. This English version was translated with the help of AI.",
   },
