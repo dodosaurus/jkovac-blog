@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useRef } from "react";
 import {
   articleExcerpt,
   articleTitle,
@@ -30,54 +29,38 @@ function TagFilter({ articles, locale, pathname, selectedTag }: {
   selectedTag?: string;
 }) {
   const text = copy[locale];
-  const detailsRef = useRef<HTMLDetailsElement>(null);
   const tags = getTags(articles, locale);
-  const visibleCount = selectedTag
-    ? articles.filter((article) => article.tags.includes(selectedTag)).length
-    : articles.length;
 
   return (
-    <details className="tag-filter" ref={detailsRef}>
-      <summary className="tag-filter-summary">
-        <span className="tag-filter-summary-label">{text.articleFilter}</span>
-        <span className="tag-filter-current" aria-live="polite">
-          {selectedTag ?? text.allArticles}
-        </span>
-        <span className="tag-filter-count">{visibleCount}</span>
-        <span className="tag-filter-icon" aria-hidden="true">+</span>
-      </summary>
-      <nav className="tag-filter-panel" aria-label={text.filterByTag}>
-        <span className="tag-filter-label">{text.filterByTag}</span>
-        <div className="tag-filter-options">
-          <Link
-            aria-current={!selectedTag ? "page" : undefined}
-            className="tag-filter-option"
-            href={tagHref(pathname)}
-            onClick={() => detailsRef.current?.removeAttribute("open")}
-            scroll={false}
-          >
-            {text.allArticles}
-            <span>{articles.length}</span>
-          </Link>
-          {tags.map((tag) => {
-            const count = articles.filter((article) => article.tags.includes(tag)).length;
-            return (
-              <Link
-                aria-current={selectedTag === tag ? "page" : undefined}
-                className="tag-filter-option"
-                href={tagHref(pathname, tag)}
-                key={tag}
-                onClick={() => detailsRef.current?.removeAttribute("open")}
-                scroll={false}
-              >
-                {tag}
-                <span>{count}</span>
-              </Link>
-            );
-          })}
-        </div>
-      </nav>
-    </details>
+    <nav className="tag-filter" aria-label={text.filterByTag}>
+      <span className="tag-filter-label">{text.articleFilter}</span>
+      <div className="tag-filter-options">
+        <Link
+          aria-current={!selectedTag ? "page" : undefined}
+          className="tag-filter-option"
+          href={tagHref(pathname)}
+          scroll={false}
+        >
+          {text.allArticles}
+          <span>{articles.length}</span>
+        </Link>
+        {tags.map((tag) => {
+          const count = articles.filter((article) => article.tags.includes(tag)).length;
+          return (
+            <Link
+              aria-current={selectedTag === tag ? "page" : undefined}
+              className="tag-filter-option"
+              href={tagHref(pathname, tag)}
+              key={tag}
+              scroll={false}
+            >
+              {tag}
+              <span>{count}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
   );
 }
 

@@ -14,7 +14,12 @@ export function SiteHeader({
 
   return (
     <header className="shell site-header">
-      <Link className="wordmark" href={localizePath(locale, "/")} aria-label={locale === "sk" ? "Domov" : "Home"}>
+      <Link
+        className="wordmark"
+        href={localizePath(locale, "/")}
+        scroll={false}
+        aria-label={locale === "sk" ? "Domov" : "Home"}
+      >
         <span className="wordmark-mark" aria-hidden="true">JK</span>
       </Link>
       <div className="header-right">

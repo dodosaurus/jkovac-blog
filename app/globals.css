@@ -65,13 +65,14 @@ a {
 
 .wordmark-mark {
   display: grid;
-  width: 2rem;
-  height: 2rem;
+  width: 2.65rem;
+  height: 2.65rem;
   place-items: center;
   border: 1px solid #d6d6d1;
-  font-size: 0.72rem;
-  font-weight: 650;
-  letter-spacing: -0.08em;
+  font-size: 1.05rem;
+  font-weight: 720;
+  letter-spacing: -0.12em;
+  line-height: 1;
 }
 
 .site-nav,
@@ -124,68 +125,20 @@ a {
 }
 
 .tag-filter {
-  margin-bottom: 1.5rem;
-  border-block: 1px solid var(--line);
-}
-
-.tag-filter-summary {
   display: grid;
-  grid-template-columns: 9rem minmax(0, 1fr) auto auto;
+  grid-template-columns: 9rem minmax(0, 1fr);
   gap: 2rem;
-  align-items: center;
-  min-height: 3.5rem;
-  cursor: pointer;
-  list-style: none;
+  align-items: start;
+  margin-bottom: 2rem;
+  padding: 0.9rem 1rem;
+  background: var(--surface);
 }
 
-.tag-filter-summary::-webkit-details-marker {
-  display: none;
-}
-
-.tag-filter-summary-label,
 .tag-filter-label {
   color: var(--quiet);
   font-size: 0.68rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-.tag-filter-current {
-  color: var(--muted);
-  font-size: 0.78rem;
-}
-
-.tag-filter-count {
-  min-width: 1.65rem;
-  color: var(--quiet);
-  font-size: 0.65rem;
-  text-align: right;
-}
-
-.tag-filter-icon {
-  color: var(--muted);
-  font-size: 1.15rem;
-  line-height: 1;
-  transition: color 160ms ease, transform 160ms ease;
-}
-
-.tag-filter-summary:hover .tag-filter-current,
-.tag-filter-summary:hover .tag-filter-icon,
-.tag-filter-summary:focus-visible .tag-filter-current,
-.tag-filter-summary:focus-visible .tag-filter-icon {
-  color: var(--ink);
-}
-
-.tag-filter[open] .tag-filter-icon {
-  transform: rotate(45deg);
-}
-
-.tag-filter-panel {
-  display: grid;
-  grid-template-columns: 9rem minmax(0, 1fr);
-  gap: 2rem;
-  align-items: start;
-  padding: 0.35rem 0 1.25rem;
 }
 
 .tag-filter-label {
@@ -213,6 +166,7 @@ a {
 .tag-filter-option {
   gap: 0.65rem;
   padding: 0.58rem 0.7rem;
+  background: var(--line-soft);
 }
 
 .tag-filter-option span {
@@ -250,7 +204,7 @@ a {
 }
 
 .article-list {
-  border-top: 1px solid var(--line);
+  min-width: 0;
 }
 
 .article-row {
@@ -640,14 +594,10 @@ a {
     gap: 0.75rem 1rem;
   }
 
-  .tag-filter-summary {
-    grid-template-columns: minmax(0, 1fr) auto auto auto;
-    gap: 0.75rem;
-  }
-
-  .tag-filter-panel {
+  .tag-filter {
     grid-template-columns: 1fr;
     gap: 0.75rem;
+    padding: 0.85rem;
   }
 
   .tag-filter-label {
