@@ -37,7 +37,7 @@ A nemusíme skončiť iba pri takomto jednoduchom modeli.
 
 # Prečo nie viac agentov?
 
-![Skupina mužov vybiehajúca z brány ako metafora subagentov vypustených do kódovej bázy](/blog-assets/ai-agent-software-testing/sub-agents-released-into-codebase.gif)
+![Skupina mužov vybiehajúca z brány ako metafora subagentov vypustených do kódovej bázy](/blog-assets/ai-agent-software-testing/sub-agents-released-into-codebase.webp)
 
 *[Pôvodné meme od @beginbot na X](https://x.com/beginbot/status/2095935984433336633/video/1).*
 
@@ -78,7 +78,7 @@ And we do not have to stop at such a simple model.
 
 # Why not have more agents?
 
-![A group of men running out of a gate as a metaphor for sub-agents being released into a codebase](/blog-assets/ai-agent-software-testing/sub-agents-released-into-codebase.gif)
+![A group of men running out of a gate as a metaphor for sub-agents being released into a codebase](/blog-assets/ai-agent-software-testing/sub-agents-released-into-codebase.webp)
 
 *[Original meme by @beginbot on X](https://x.com/beginbot/status/2095935984433336633/video/1).*
 

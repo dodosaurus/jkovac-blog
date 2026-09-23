@@ -10,7 +10,7 @@ import { ArticleMarkdown } from "@/components/article-markdown";
 import { ArticleToc } from "@/components/article-toc";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { absoluteUrl, jsonLd, SITE_URL } from "@/lib/seo";
+import { absoluteUrl, jsonLd, PERSON_ID, SITE_URL, WEBSITE_ID } from "@/lib/seo";
 
 export function ArticlePage({ article, locale }: { article: Article; locale: Locale }) {
   const text = copy[locale];
@@ -34,8 +34,21 @@ export function ArticlePage({ article, locale }: { article: Article; locale: Loc
             datePublished: article.published_at,
             dateModified: article.updated_at,
             inLanguage: locale,
-            author: { "@type": "Person", name: article.author, url: `${SITE_URL}/about/` },
-            publisher: { "@type": "Person", name: article.author, url: `${SITE_URL}/about/` },
+            articleSection: locale === "sk" ? article.category_sk : article.category_en,
+            keywords: article.tags,
+            isPartOf: { "@id": WEBSITE_ID },
+            author: {
+              "@type": "Person",
+              "@id": PERSON_ID,
+              name: article.author,
+              url: absoluteUrl("/about"),
+            },
+            publisher: {
+              "@type": "Person",
+              "@id": PERSON_ID,
+              name: article.author,
+              url: absoluteUrl("/about"),
+            },
             ...(article.cover_image ? { image: `${SITE_URL}${article.cover_image}` } : {}),
           }),
         }}

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { copy, type Locale } from "@/lib/i18n";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { absoluteUrl, jsonLd, SITE_URL } from "@/lib/seo";
+import { absoluteUrl, jsonLd, PERSON_ID, SITE_URL } from "@/lib/seo";
 
 export function AboutPage({ locale }: { locale: Locale }) {
   const text = copy[locale];
@@ -20,8 +20,9 @@ export function AboutPage({ locale }: { locale: Locale }) {
             inLanguage: locale,
             mainEntity: {
               "@type": "Person",
-              "@id": `${SITE_URL}/about/#person`,
+              "@id": PERSON_ID,
               name: "Jozef Kováč",
+              url: absoluteUrl("/about"),
               image: `${SITE_URL}/jozef-kovac.jpg`,
               sameAs: ["https://github.com/dodosaurus"],
               jobTitle: locale === "sk" ? ["Softvérový inžinier", "Farmaceut"] : ["Software engineer", "Pharmacist"],
