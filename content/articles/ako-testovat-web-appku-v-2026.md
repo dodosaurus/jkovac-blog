@@ -15,7 +15,6 @@ category_en: Technology
 tags:
   - AI
   - QA
-  - testing
 canonical_path: /blog/ako-testovat-web-appku-v-2026
 source_locale: sk
 translation_en: ai-assisted
