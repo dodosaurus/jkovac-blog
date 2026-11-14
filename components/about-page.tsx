@@ -1,71 +1,23 @@
 import Image from "next/image";
 import { copy, type Locale } from "@/lib/i18n";
-import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { absoluteUrl, jsonLd, PERSON_ID, SITE_URL } from "@/lib/seo";
-
+import { SiteFooter } from "@/components/site-footer";
+const experience = [
+  { date: "05/2026 →", title: "Software Engineer", company: "HOTOVO → Dentons Europe", en: "Production development and QA ownership for a legal AI platform.", sk: "Produkčný vývoj a zodpovednosť za QA právnej AI platformy." },
+  { date: "02/2026 →", title: "Founder & Software Engineer", company: "Kovac Software s.r.o.", en: "Founded my company to build web and mobile solutions for clients.", sk: "Založil som vlastnú spoločnosť pre vývoj webových a mobilných riešení pre klientov." },
+  { date: "11/2022 – 05/2026", title: "Test Automation Engineer", company: "HOTOVO → Protecht", en: "API automation with Robot Framework, internal developer tools, test-data generation and AI-assisted testing workflows.", sk: "API automatizácia cez Robot Framework, interné nástroje, generovanie testovacích dát a testovanie s pomocou AI." },
+  { date: "08/2018 – 11/2022", title: "Test Automation Engineer", company: "FPT Slovakia → Compleo", en: "E-mobility testing across APIs, UI, messaging and integrations. Co-led the UFT-to-Cypress migration.", sk: "Testovanie e-mobility platformy naprieč API, UI, messagingom a integráciami. Spoluvedenie migrácie z UFT na Cypress." },
+];
 export function AboutPage({ locale }: { locale: Locale }) {
   const text = copy[locale];
-  const alternatePath = locale === "sk" ? "/en/about" : "/about";
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: jsonLd({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            url: absoluteUrl(locale === "sk" ? "/about" : "/en/about"),
-            inLanguage: locale,
-            mainEntity: {
-              "@type": "Person",
-              "@id": PERSON_ID,
-              name: "Jozef Kováč",
-              url: absoluteUrl("/about"),
-              image: `${SITE_URL}/jozef-kovac.jpg`,
-              sameAs: ["https://github.com/dodosaurus"],
-              jobTitle: locale === "sk" ? ["Softvérový inžinier", "Farmaceut"] : ["Software engineer", "Pharmacist"],
-            },
-          }),
-        }}
-      />
-      <a className="skip-link" href="#about">{text.skip}</a>
-      <SiteHeader locale={locale} alternatePath={alternatePath} currentPath="/about" />
-      <main id="about">
-        <section className="shell about-section" aria-labelledby="about-title">
-          <p className="section-kicker">{text.aboutKicker}</p>
-          <div className="about-grid">
-            <div className="about-copy">
-              <h1 id="about-title">{text.aboutTitle}</h1>
-              <p>{text.aboutBody}</p>
-              <a
-                className="about-social-link"
-                href="https://github.com/dodosaurus"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={locale === "sk" ? "Môj profil na GitHube" : "My GitHub profile"}
-              >
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.74 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.27-5.23-5.68 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.17a10.99 10.99 0 0 1 5.75 0c2.2-1.48 3.16-1.17 3.16-1.17.62 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.42-2.69 5.38-5.25 5.67.41.36.77 1.06.77 2.14v3.18c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-                </svg>
-                <span>GitHub</span>
-                <span className="about-social-arrow" aria-hidden="true">↗</span>
-              </a>
-            </div>
-            <div className="portrait-frame">
-              <Image
-                alt={locale === "sk" ? "Portrét autora" : "Portrait of the author"}
-                fill
-                priority
-                sizes="(max-width: 780px) 128px, 160px"
-                src="/jozef-kovac.jpg"
-              />
-            </div>
-          </div>
-        </section>
-      </main>
-      <SiteFooter locale={locale} />
-    </>
-  );
+  return <><a className="skip-link" href="#main">{text.skip}</a><SiteHeader locale={locale} currentPath="/about" />
+    <main id="main"><section className="shell about-section"><p className="section-kicker">{text.about}</p><div className="about-grid"><div className="about-copy">
+      <h1>{locale === "en" ? "Engineer. Tester. Builder." : "Vývojár. Tester. Tvorca."}</h1>
+      <p>{locale === "en" ? "I’m Jozef, a software engineer based in Košice, Slovakia. Since 2018, I’ve worked across test automation, APIs and application development. I enjoy finding the practical problem behind a request and building something useful to solve it." : "Som Jozef, softvérový inžinier z Košíc. Od roku 2018 pracujem s automatizáciou testov, API a vývojom aplikácií. Baví ma nájsť praktický problém za požiadavkou a vytvoriť niečo užitočné na jeho vyriešenie."}</p>
+      <p className="about-followup">{locale === "en" ? "Today I combine production development and QA for legal AI, and run Kovac Software s.r.o., founded in February 2026. I’m interested in SDET and Forward Deployed Engineer roles where I can own problems from understanding the workflow through to delivery and validation." : "Dnes spájam produkčný vývoj a QA právnej AI a vediem Kovac Software s.r.o., založenú vo februári 2026. Zaujímajú ma SDET a Forward Deployed Engineer roly, kde môžem riešiť problém od pochopenia procesu až po dodanie a overenie."}</p>
+      <div className="about-links"><a className="about-social-link" href="https://www.linkedin.com/in/kovacjozef/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a className="about-social-link" href="https://github.com/dodosaurus" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+    </div><div className="portrait-frame"><Image alt="Jozef Kováč" fill priority sizes="(max-width:780px) 128px, 160px" src="/jozef-kovac.jpg" /></div></div></section>
+      <section className="shell experience-section"><p className="section-kicker">{locale === "en" ? "Experience" : "Skúsenosti"}</p><div>{experience.map(item => <article className="experience-row" key={item.company}><span>{item.date}</span><div><h2>{item.title}</h2><p className="experience-company">{item.company}</p><p>{item[locale]}</p></div></article>)}</div></section>
+      <section className="shell contact-section"><h2>{locale === "en" ? "Let’s build something useful." : "Vytvorme niečo užitočné."}</h2><a className="text-link" href="mailto:kovac.jozef25@gmail.com">kovac.jozef25@gmail.com ↗</a></section>
+    </main><SiteFooter locale={locale} /></>;
 }

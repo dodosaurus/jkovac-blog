@@ -1,0 +1,11 @@
+{
+  "reference": "content/cv/reference.pdf",
+  "profile": "Software engineer with 8+ years of experience in test automation, internal tooling and software development. I enjoy building practical software that helps my team work better and solves real problems for clients. I combine hands-on development with responsibility for quality, from exploring a problem to implementing and testing a solution. I value creative teamwork and meaningful work that helps people.",
+  "founder_title": "Founder & Software Engineer",
+  "founder_description": "Founded Kovac Software s.r.o. in February 2026. Developing software projects and client solutions for various small clients, mostly web and mobile applications.",
+  "rxops_description": "Newest prototype for assembling clinical context into structured prompts for AI analysis. It is not yet being used by end users.",
+  "omit_other_pharmacy_references": true,
+  "include_pharmacy_experience_first": true,
+  "subtitle": "Software Engineer",
+  "document_title": "Jozef Kováč"
+}

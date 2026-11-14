@@ -1,0 +1,127 @@
+{
+  "captured_on": "2026-11-14",
+  "sources": [
+    {
+      "file": "public/case-studies/entry-generator-register-setup.png",
+      "source": "/Users/dodo/LOCAL/hotovo/protecht/erm-entry-generator/image.png",
+      "kind": "existing-project-screenshot",
+      "sha256": "ffff1422119cfca9ba9b613d60af03844670161272030afeca992a17bbf16b5d"
+    },
+    {
+      "file": "public/case-studies/kiwigen-recorded-audit-list.png",
+      "source": "/Users/dodo/LOCAL/hotovo/protecht/erm-ai-generated-tests/recordings/session-2026-01-19-060656/screenshots/screenshot-146024.png",
+      "kind": "existing-project-screenshot",
+      "sha256": "ad2e97194bc2c7f8c695be4ed189ea94669f2bcd1bc38e5af2f9019de824cc72"
+    },
+    {
+      "file": "public/case-studies/kiwigen-recorded-audit-form.png",
+      "source": "/Users/dodo/LOCAL/hotovo/protecht/erm-ai-generated-tests/recordings/session-2026-01-19-060656/screenshots/screenshot-151532.png",
+      "kind": "existing-project-screenshot",
+      "sha256": "752450025d02971051d1ba6b1b605bade7d1f5cab9dbe48dac9163c632480300"
+    },
+    {
+      "file": "public/case-studies/metax-desktop.jpg",
+      "source": "/Users/dodo/LOCAL/personal/metax",
+      "url": "http://127.0.0.1:3011/",
+      "kind": "browser-capture-of-existing-local-production-build",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "0c3a696dfd638b9bc574fed2f3610c84cb9deb476417b4d9405569899f2a6f50"
+    },
+    {
+      "file": "public/case-studies/metax-services.jpg",
+      "source": "/Users/dodo/LOCAL/personal/metax",
+      "url": "http://127.0.0.1:3011/#services",
+      "kind": "browser-capture-of-existing-local-production-build",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "ee2e8c1643ea8973063431b23ce5a60e894c2e707e43d5aa1a91c4e49ece3943"
+    },
+    {
+      "file": "public/case-studies/metax-gallery.jpg",
+      "source": "/Users/dodo/LOCAL/personal/metax",
+      "url": "http://127.0.0.1:3011/#gallery",
+      "kind": "browser-capture-of-existing-local-production-build",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "f73a1d204b88ec61f06b1500d0b56c0ed82ffe51e928d6a9ad73a3cec4b3be71"
+    },
+    {
+      "file": "public/case-studies/entry-generator.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/entryGenerator.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "11df8dcea4600eae0be13cfa3da4666812655530a7c3bc5cd8ffc312a13c9846"
+    },
+    {
+      "file": "public/case-studies/kiwigen.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/kiwiGen.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "be59b3a5b47f374d28ad8fcec55e75a4cf5492490f4706372fe4a9a49f521a7a"
+    },
+    {
+      "file": "public/case-studies/metax-app.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/metaxApp.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "64c7de3adb6cfc40e728fa348b80a73ea696e0a14799a9f2065af4186ad57c83"
+    },
+    {
+      "file": "public/case-studies/uft-tool-reference.png",
+      "source": "https://www.calleosoftware.co.uk/wp-content/uploads/2023/02/Eight-myths-about-UFT-One-ebook-2021.pdf",
+      "kind": "publisher-tool-reference",
+      "sha256": "16e82c1054c7ccf15f77070f9af8ee54202e383641c221a174b7f521fcd24c9f",
+      "page": 9
+    },
+    {
+      "file": "public/case-studies/cypress-tool-reference.png",
+      "source": "https://docs.cypress.io/app/end-to-end-testing/writing-your-first-end-to-end-test",
+      "kind": "official-tool-reference",
+      "sha256": "89454e794b81601dc46689012101e59de81c174e2fbe8a64e205dfd531667acd",
+      "image_url": "https://docs.cypress.io/img/app/end-to-end-testing/writing-your-first-end-to-end-test/new-spec-test-run.png"
+    },
+    {
+      "file": "public/case-studies/daisy-file-preview-current.png",
+      "kind": "existing-project-test-screenshot",
+      "sha256": "d5358449c7ff8846e50c8a9b1965215ab3ce44314e6f7c1b16f820dc090eccb6",
+      "source": "/Users/dodo/LOCAL/hotovo/dentons/daima-ui/tests/test-results/independent-file-generatio-04d6d-ML-PDF-Word-and-Excel-files-chromium/test-failed-1.png",
+      "source_modified_at": "2026-11-13T14:21:25.047740+00:00",
+      "theme": "light",
+      "context": "Test-created files; capture is a UI illustration, not a claim that the entire test passed"
+    },
+    {
+      "file": "public/case-studies/daisy-draft-current.jpg",
+      "kind": "browser-capture-of-current-development-interface",
+      "sha256": "32241e916ac7892e16db19616b332db2592d11cdfef674c6e1af1ad65309db0e",
+      "source": "https://dnts-ui-wp-dev.mangoplant-ad34e764.swedencentral.azurecontainerapps.io",
+      "captured_on": "2026-11-14",
+      "release": "6.1.1",
+      "theme": "dark",
+      "capture": "Clean UI state with sidebar collapsed; no conversation content or personal account details",
+      "viewport": {
+        "width": 2005,
+        "height": 985
+      },
+      "route": "/home/chat/new"
+    },
+    {
+      "file": "public/case-studies/daisy-chat-current.jpg",
+      "kind": "browser-capture-of-current-development-interface",
+      "sha256": "5ffcb1d708147f8b3d43efeb28746ce57bc3fdf9f13c450b2fa9685c594916c6",
+      "source": "https://dnts-ui-wp-dev.mangoplant-ad34e764.swedencentral.azurecontainerapps.io",
+      "captured_on": "2026-11-14",
+      "release": "6.1.1",
+      "theme": "dark",
+      "capture": "Clean UI state with sidebar collapsed; no conversation content or personal account details",
+      "viewport": {
+        "width": 2005,
+        "height": 985
+      },
+      "route": "/home/chat/new"
+    }
+  ]
+}

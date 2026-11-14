@@ -5,3 +5,6 @@ node_modules/
 .sites-runtime/
 *.tsbuildinfo
 
+
+tmp/
+__pycache__/
