@@ -19,21 +19,13 @@
     "en": "A friend's company needed a website, but there was also a practical problem behind the scenes: calculating the surface areas of steel parts. I worked with the client on both the public presentation and a mobile app built around jobs, measurements and reports.",
     "sk": "Kamarátova firma potrebovala web, no v samotnej prevádzke bol aj ďalší praktický problém: počítanie plôch oceľových dielov. S klientom som preto riešil verejnú prezentáciu aj mobilnú aplikáciu postavenú okolo zákaziek, meraní a výstupných reportov."
   },
-  "role": {
-    "en": "Client collaboration · mobile & web development",
-    "sk": "Spolupráca s klientom · mobilný a webový vývoj"
-  },
   "problem": {
-    "en": "METAX needed a website that would explain the company's surface-treatment services and give customers a clear way to get in touch. The team also needed to calculate the surface areas of steel parts with different shapes and keep those measurements together for each job. For the mobile app to be useful, it had to fit that working process, rather than simply offer a collection of geometric formulas.",
-    "sk": "METAX potreboval web, ktorý by predstavil služby povrchovej úpravy a dal zákazníkom jasný spôsob, ako firmu kontaktovať. Tím zároveň potreboval počítať plochy oceľových dielov rôznych tvarov a uchovávať merania spolu pri jednotlivých zákazkách. Aby bola mobilná aplikácia užitočná, musela zapadnúť do tohto pracovného postupu, nestačilo ponúknuť zbierku geometrických vzorcov."
-  },
-  "impact": {
-    "en": "The website gives potential customers a place to understand the services, see examples of the work and contact the company. In the mobile app, workers can keep parts and measurements organised by job, calculate their surface areas and export a PDF report. The calculation and its output therefore belong to the same workflow, with a record that can be used outside the app as well.",
-    "sk": "Web dáva potenciálnym zákazníkom miesto, kde môžu pochopiť služby, pozrieť si ukážky práce a kontaktovať firmu. V mobilnej aplikácii si pracovníci môžu usporiadať diely a merania podľa zákaziek, vypočítať ich plochy a exportovať PDF report. Výpočet aj jeho výstup tak patria do jedného pracovného postupu a vzniká záznam použiteľný aj mimo aplikácie."
+    "en": "METAX needed a website that would explain the company's **surface-treatment services** and give customers a clear way to get in touch. The team also needed to calculate the **surface areas of steel parts** with different shapes and keep those **measurements together for each job**. For the mobile app to be useful, it had to fit that working process, rather than simply offer a collection of geometric formulas.",
+    "sk": "METAX potreboval web, ktorý by predstavil **služby povrchovej úpravy** a dal zákazníkom jasný spôsob, ako firmu kontaktovať. Tím zároveň potreboval počítať **plochy oceľových dielov** rôznych tvarov a uchovávať **merania spolu pri jednotlivých zákazkách**. Aby bola mobilná aplikácia užitočná, musela zapadnúť do tohto pracovného postupu, nestačilo ponúknuť zbierku geometrických vzorcov."
   },
   "solution": {
-    "en": "I worked directly with the client to turn the practical requirements into a Next.js website and a React Native application built with Expo. For the mobile workflow, I organised the interface around jobs and individual parts: select a shape, enter its dimensions, calculate the area and keep the result with the job before exporting a report. The website presents the services, technical details and completed work, with contact information available from the same page.",
-    "sk": "S klientom som priamo riešil, ako praktické požiadavky pretaviť do webu v Next.js a mobilnej aplikácie v React Native s Expom. Mobilné rozhranie som postavil okolo zákaziek a jednotlivých dielov: vybrať tvar, zadať rozmery, vypočítať plochu a uložiť výsledok k zákazke pred exportom reportu. Web predstavuje služby, technické detaily aj dokončené práce, pričom kontaktné informácie sú dostupné na tej istej stránke."
+    "en": "I worked **directly with the client** to turn the practical requirements into a **Next.js website** and a **React Native application built with Expo**. For the mobile workflow, I organised the interface around **jobs and individual parts**: select a shape, enter its dimensions, calculate the area and keep the result with the job before exporting a report. The website presents the services, technical details and completed work, with contact information available from the same page.",
+    "sk": "**S klientom som priamo riešil**, ako praktické požiadavky pretaviť do **webu v Next.js** a **mobilnej aplikácie v React Native s Expom**. Mobilné rozhranie som postavil okolo **zákaziek a jednotlivých dielov**: vybrať tvar, zadať rozmery, vypočítať plochu a uložiť výsledok k zákazke pred exportom reportu. Web predstavuje služby, technické detaily aj dokončené práce, pričom kontaktné informácie sú dostupné na tej istej stránke."
   },
   "media": [
     {
@@ -74,24 +66,11 @@
         "en": "The services page explains the work and shows prices and specifications.",
         "sk": "Sekcia služieb vysvetľuje prácu a ukazuje ceny aj špecifikácie."
       }
-    },
-    {
-      "src": "/case-studies/metax-gallery.jpg",
-      "width": 1425,
-      "height": 990,
-      "alt": {
-        "en": "METAX website gallery showing a finished painted metal surface",
-        "sk": "Galéria METAX webu s ukážkou dokončeného natretého kovového povrchu"
-      },
-      "caption": {
-        "en": "A gallery with examples of the company's work.",
-        "sk": "Galéria s ukážkami práce firmy."
-      }
     }
   ],
   "link": {
     "url": "https://metaxsk.sk",
-    "label": "METAX SK"
+    "label": "metaxsk.sk"
   },
   "thumbnail": "/case-studies/metax-desktop.jpg"
 }

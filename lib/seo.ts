@@ -13,7 +13,7 @@ export function alternateUrls(path: string) {
 }
 export function pageMetadata({ locale, path, title, description, home }: { locale: Locale; path: string; title: string; description: string; home?: boolean }): Metadata {
   const url = absoluteUrl(localizePath(locale, path));
-  const images = [{ url: `${SITE_URL}/social-card.png`, width: 1200, height: 630, alt: "Jozef Kováč — Software Engineer / SDET" }];
+  const images = [{ url: `${SITE_URL}/social-card.png`, width: 1200, height: 630, alt: "Jozef Kováč — Software Engineer" }];
   return { title: home ? { absolute: title } : title, description, alternates: { canonical: url, languages: alternateUrls(path) }, openGraph: { title, description, url, siteName: SITE_NAME, locale: locale === "en" ? "en_US" : "sk_SK", type: "website", images }, twitter: { card: "summary_large_image", title, description, images } };
 }
 export function jsonLd(value: Record<string, unknown>) { return JSON.stringify(value).replace(/</g, "\u003c"); }

@@ -149,7 +149,7 @@ page1[NameObject('/Contents')] = stream
 changed = edit_text(page1, first_page)
 assert len(changed) == 8, f'Unexpected first-page text blocks: {changed}'
 page2 = reader.pages[1]
-include_pharmacy = data['include_pharmacy_experience_first']
+include_pharmacy = data['include_pharmacy_experience']
 pharmacy_source = deepcopy(page2) if include_pharmacy else None
 if data['omit_other_pharmacy_references']:
     def second_page(x, top, matrix, font_resource):
@@ -214,13 +214,9 @@ if include_pharmacy:
         ])
         target.merge_transformed_page(fragment, Transformation().translate(0, offset))
 
-    first = writer.add_blank_page(width=W, height=H)
-    merge_region(first, page1, 0, 396)                 # Header, profile, Experience heading.
-    merge_region(first, pharmacy_source, 65, 175, -337) # Pharmacy is the first experience item.
-    merge_region(first, page1, 398, 665, -124)         # Dentons, founder, Protecht.
-    merge_region(first, page1, 790, H)                # Original footer.
+    writer.add_page(page1)                           # Header, profile and four software roles.
     second = writer.add_blank_page(width=W, height=H)
-    merge_region(second, page1, 674, 765, 610.2)      # FPT continues on page two.
+    merge_region(second, pharmacy_source, 65, 175)    # Earliest role follows FPT on page two.
     merge_region(second, page2, 183, H)               # Projects, skills, certifications, footer.
 else:
     writer.add_page(page1); writer.add_page(page2)
@@ -239,15 +235,17 @@ if data['omit_other_pharmacy_references']:
     if include_pharmacy:
         page_one = result.pages[0].extract_text(extraction_mode='layout')
         experience = page_one.split('Experience', 1)[1]
-        assert experience.strip().startswith('Flying Pharmacist')
-        assert experience.index('Flying Pharmacist') < experience.index('Software Engineer') < experience.index(data['founder_title']) < experience.index('Test Automation Engineer')
+        assert experience.strip().startswith('Software Engineer')
+        assert experience.index('Software Engineer') < experience.index(data['founder_title']) < experience.index('Test Automation Engineer') < experience.index('FPT Slovakia')
+        assert 'Flying Pharmacist' not in page_one
         assert text.count('Flying Pharmacist') == 1 and text.count('BENU') == 1
-        # Pharmacy is present only in the first role, without restoring education
+        # Pharmacy is present only in the last role, without restoring education
         # or the former pharmacy references in the profile and project cards.
-        remainder = page_one.split('Experience', 1)[0] + experience[experience.index('Software Engineer'):] + result.pages[1].extract_text()
+        page_two = result.pages[1].extract_text(extraction_mode='layout')
+        assert page_two.strip().startswith('Flying Pharmacist')
+        assert page_two.index('Flying Pharmacist') < page_two.index('Selected public projects')
+        remainder = page_one + page_two.split('Selected public projects', 1)[1]
         assert not any(word in remainder.lower() for word in ['pharmac', 'pharmdr', 'benu'])
-        page_two = result.pages[1].extract_text()
-        assert page_two.index('FPT Slovakia') < page_two.index('Selected public projects')
     else:
         assert not any(word in text.lower() for word in ['pharmac', 'pharmdr', 'benu'])
 assert data['founder_title'] in text and 'February 2026 - Present' in text

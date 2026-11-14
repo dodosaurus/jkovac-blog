@@ -13,14 +13,12 @@ export type CaseStudy = {
   stack: string[];
   title: Localized;
   excerpt: Localized;
-  role: Localized;
   problem: Localized;
-  impact: Localized;
   solution: Localized;
   link?: { url: string; label: string };
   media: { src: string; alt: Localized; caption: Localized; type?: "video"; width?: number; height?: number; source?: { url: string; label: string } }[];
 };
-export type CaseSummary = Omit<CaseStudy, "media" | "problem" | "impact" | "solution" | "thumbnail"> & {
+export type CaseSummary = Omit<CaseStudy, "media" | "problem" | "solution" | "thumbnail"> & {
   thumbnail: CaseStudy["media"][number];
 };
 
@@ -34,7 +32,7 @@ function validate(study: CaseStudy, filename: string) {
   for (const field of ["client", "period"] as const) {
     if (typeof study[field] !== "string" || !study[field].trim()) invalid(field);
   }
-  for (const field of ["title", "excerpt", "role", "problem", "impact", "solution"] as const) localized(study[field], field);
+  for (const field of ["title", "excerpt", "problem", "solution"] as const) localized(study[field], field);
   if (!Array.isArray(study.stack) || !study.stack.length || !study.stack.every(item => typeof item === "string")) invalid("stack");
   if (!Array.isArray(study.media)) invalid("media");
   if (!study.media.some(media => media.src === study.thumbnail && !media.type)) invalid("thumbnail");
@@ -68,7 +66,7 @@ export function getCaseStudy(slug: string) {
 }
 
 export function caseSummary(study: CaseStudy): CaseSummary {
-  const { media, thumbnail, problem: _problem, impact: _impact, solution: _solution, ...summary } = study;
+  const { media, thumbnail, problem: _problem, solution: _solution, ...summary } = study;
   const image = media.find(item => item.src === thumbnail)!;
   return { ...summary, thumbnail: { ...image, src: `/case-studies/thumbnails/${study.slug}.webp`, width: 720, height: 450 } };
 }

@@ -5,7 +5,7 @@
   "founder_description": "Founded Kovac Software s.r.o. in February 2026. Developing software projects and client solutions for various small clients, mostly web and mobile applications.",
   "rxops_description": "Newest prototype for assembling clinical context into structured prompts for AI analysis. It is not yet being used by end users.",
   "omit_other_pharmacy_references": true,
-  "include_pharmacy_experience_first": true,
+  "include_pharmacy_experience": true,
   "subtitle": "Software Engineer",
   "document_title": "Jozef Kováč"
 }

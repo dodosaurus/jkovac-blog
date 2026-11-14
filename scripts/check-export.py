@@ -46,7 +46,10 @@ for locale,prefix in [('en',''),('sk','/sk')]:
         assert '/cv/' not in html and 'Jozef_Kovac_CV.pdf' not in html,url
         assert 'class="workflow"' not in html and 'case-narrative' not in html,url
         if '/case-studies/' in url:
-            assert html.count('<h2>')==3,(url,'Expected only Problem / Impact / Solution headings')
+            assert html.count('<h2>')==2,(url,'Expected only Problem / Solution headings')
+            assert html.count('<strong>')>=4,(url,'Expected highlighted keywords in the summaries')
+            assert '**' not in ' '.join(page.text),(url,'Unrendered Markdown emphasis')
+            assert not any(label in page.text for label in ['Impact', 'Prínos']),(url,'Unexpected Impact section')
         if path=='/':
             assert 'portfolio-intro' not in html and 'class="hero"' not in html,url
             assert 'tag-filter' not in html and 'article-tags' not in html and '?tag=' not in html,url
@@ -56,9 +59,8 @@ for locale,prefix in [('en',''),('sk','/sk')]:
                 assert '/thumbnails/' in image['src'],(url,'Expected optimized miniature')
                 assert image.get('width')=='720' and image.get('height')=='450',url
             visible=' '.join(page.text)
-            for client in ['Dentons Europe','Protecht','METAX SK','Compleo']:
+            for client in ['Dentons Europe','HOTOVO','Protecht','METAX SK','Compleo']:
                 assert client in visible,(url,'Missing final client',client)
-            assert 'HOTOVO' not in visible,url
         assert page.lang==locale,(url,page.lang)
         assert page.h1s==1,(url,'H1 count',page.h1s)
         assert page.canonical=='https://www.jkovac.eu'+url,(url,page.canonical)
@@ -91,4 +93,4 @@ locations=[node.text for node in sitemap.findall('.//s:loc',ns)]
 assert len(locations)==14 and all('/blog/' not in url for url in locations)
 assert not (OUT/'cv').exists() and not (ROOT/'public/cv').exists()
 assert not any(file.name.lower()=='jozef_kovac_cv.pdf' for file in OUT.rglob('*.pdf'))
-print(f'PASS: {count} canonical pages, 2 legacy aliases, local links/media/fragments, bilingual metadata, sitemap, three-part case studies, thumbnail list without tags/filters, no CV/diagrams/landing hero, and archive isolation.')
+print(f'PASS: {count} canonical pages, 2 legacy aliases, local links/media/fragments, bilingual metadata, sitemap, two-part case studies with highlighted keywords, thumbnail list without tags/filters, no CV/diagrams/landing hero, and archive isolation.')

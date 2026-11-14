@@ -3,7 +3,7 @@
   "slug": "cypress-migration",
   "order": 5,
   "client": "Compleo",
-  "period": "2018–2022",
+  "period": "2020",
   "stack": [
     "Cypress",
     "Micro Focus UFT",
@@ -19,38 +19,30 @@
     "en": "At FPT Slovakia, I co-led the move from Micro Focus UFT to Cypress for Compleo's e-mobility platform. Alongside the proof of concept and shared core functionality, the work involved helping backend testers make the transition in their own tests.",
     "sk": "Vo FPT Slovakia som sa podieľal na vedení prechodu z Micro Focus UFT na Cypress pre e-mobility platformu Compleo. Popri proof of concept a spoločnom jadre bolo súčasťou práce aj pomôcť backend testerom preniesť do nového prostredia ich vlastné testy."
   },
-  "role": {
-    "en": "Test Automation Engineer · migration co-lead",
-    "sk": "Test Automation Engineer · spoluvedenie migrácie"
-  },
   "problem": {
-    "en": "Compleo's e-mobility platform had an existing automation suite in Micro Focus UFT, which the team wanted to replace with Cypress. The testing work included end-to-end scenarios as well as microservices, REST/SOAP interfaces and RabbitMQ messaging. The challenge was therefore also a team transition: backend testers needed a usable foundation in the new tool before they could move their existing work across.",
-    "sk": "E-mobility platforma Compleo mala existujúcu automatizáciu v Micro Focus UFT, ktorú chcel tím nahradiť Cypressom. Testovanie zahŕňalo end-to-end scenáre aj mikroslužby, REST/SOAP rozhrania a komunikáciu cez RabbitMQ. Výzva preto spočívala aj v prechode celého tímu: backend testeri potrebovali použiteľný základ v novom nástroji, na ktorom mohli preniesť svoju dovtedajšiu prácu."
-  },
-  "impact": {
-    "en": "The team moved its test automation to Cypress with shared core functionality available for further test development. Backend testers had a common starting point for the transition and support with applying it to their own scenarios. This gave the migration a practical outcome beyond the proof of concept: a setup the team could continue working with as it moved away from UFT.",
-    "sk": "Tím prešiel s automatizáciou na Cypress a získal spoločné jadro použiteľné pri ďalšom vývoji testov. Backend testeri mali spoločný východiskový bod aj podporu pri jeho použití vo vlastných scenároch. Migrácia tak mala praktický výsledok presahujúci proof of concept: prostredie, s ktorým tím vedel ďalej pracovať pri odchode od UFT."
+    "en": "Compleo's e-mobility platform had an existing automation suite in Micro Focus UFT, which the team wanted to **replace with Cypress**. The testing work included end-to-end scenarios as well as microservices, **REST/SOAP interfaces and RabbitMQ messaging**. The challenge was therefore also a **team transition**: backend testers needed a usable foundation in the new tool before they could move their existing work across.",
+    "sk": "E-mobility platforma Compleo mala existujúcu automatizáciu v Micro Focus UFT, ktorú chcel tím **nahradiť Cypressom**. Testovanie zahŕňalo end-to-end scenáre aj mikroslužby, **REST/SOAP rozhrania a komunikáciu cez RabbitMQ**. Výzva preto spočívala aj v **prechode celého tímu**: backend testeri potrebovali použiteľný základ v novom nástroji, na ktorom mohli preniesť svoju dovtedajšiu prácu."
   },
   "solution": {
-    "en": "I co-led the migration by helping develop the proof of concept and the core functionality on which the Cypress tests could be built. From there, the work continued through knowledge sharing and hands-on support for backend testers as they transferred their tests. My contribution covered both the technical foundation and the work of making it understandable and usable for the people who would maintain the automation afterwards.",
-    "sk": "Migráciu som spoluviedol tým, že som pomáhal vyvíjať proof of concept a jadro funkcionality, na ktorom sa dali stavať Cypress testy. Práca potom pokračovala zdieľaním znalostí a praktickou podporou backend testerov pri prenose ich testov. Môj príspevok zahŕňal technický základ aj prácu na tom, aby mu rozumeli a vedeli ho používať ľudia, ktorí sa o automatizáciu mali ďalej starať."
+    "en": "I **co-led the migration** by helping develop the **proof of concept and the core functionality** on which the Cypress tests could be built. From there, the work continued through **knowledge sharing and hands-on support** for backend testers as they transferred their tests. My contribution covered both the technical foundation and the work of making it understandable and usable for the people who would maintain the automation afterwards.",
+    "sk": "**Migráciu som spoluviedol** tým, že som pomáhal vyvíjať **proof of concept a jadro funkcionality**, na ktorom sa dali stavať Cypress testy. Práca potom pokračovala **zdieľaním znalostí a praktickou podporou** backend testerov pri prenose ich testov. Môj príspevok zahŕňal technický základ aj prácu na tom, aby mu rozumeli a vedeli ho používať ľudia, ktorí sa o automatizáciu mali ďalej starať."
   },
   "media": [
     {
       "src": "/case-studies/uft-tool-reference.png",
-      "width": 780,
-      "height": 505,
+      "width": 1680,
+      "height": 1019,
       "alt": {
-        "en": "Micro Focus UFT One dark IDE with a test open in the editor",
-        "sk": "Tmavé rozhranie Micro Focus UFT One s otvoreným testom v editore"
+        "en": "UFT test editor with VBScript and the Object Repository",
+        "sk": "Editor testov UFT s VBScriptom a oknom Object Repository"
       },
       "caption": {
-        "en": "Micro Focus UFT One: an example of the test editor. This is a tool reference, not a screenshot from the Compleo project.",
-        "sk": "Micro Focus UFT One: ukážka editora testov. Nie je to screenshot z projektu Compleo."
+        "en": "UFT: an example of the test editor and Object Repository. This is a tool reference, not a screenshot from the Compleo project.",
+        "sk": "UFT: ukážka editora testov a okna Object Repository. Nie je to screenshot z projektu Compleo."
       },
       "source": {
-        "url": "https://www.calleosoftware.co.uk/wp-content/uploads/2023/02/Eight-myths-about-UFT-One-ebook-2021.pdf",
-        "label": "Micro Focus UFT One ebook, p. 9"
+        "url": "https://sdtimes.com/wp-content/uploads/2018/09/uft.png",
+        "label": "SD Times"
       }
     },
     {

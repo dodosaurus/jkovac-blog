@@ -304,21 +304,6 @@ a {
   object-position: 50% 43%;
 }
 
-.site-footer {
-  display: flex;
-  min-height: 8rem;
-  align-items: center;
-  justify-content: flex-end;
-  color: var(--quiet);
-  font-size: 0.72rem;
-  text-align: right;
-}
-
-.site-footer a {
-  color: var(--muted);
-  text-underline-offset: 0.25rem;
-}
-
 .article-shell {
   width: min(100% - 2rem, 86rem);
   margin-inline: auto;
@@ -569,18 +554,18 @@ a {
 .text-link { color: var(--muted); font-size: .78rem; text-underline-offset: .35rem; }
 .case-context { color: var(--quiet); font-size: .72rem; }
 .case-context p { margin: .7rem 0 .35rem; color: var(--muted); font-size: .72rem; line-height: 1.55; }
-.case-role { display: block; margin-top: 1rem; }
 .case-heading { padding-block: 2.5rem 2rem; }
 .back-link { display: inline-block; margin-bottom: 3.5rem; text-decoration: none; }
 .case-heading h1 { max-width: 21ch; font-weight: 430; font-size: clamp(2.3rem, 5.3vw, 5rem); letter-spacing: -.065em; line-height: 1.1; margin: 1.1rem 0 1.5rem; }
 .case-heading .article-dek { max-width: 61rem; }
 .case-facts { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem 2rem; font-size: .7rem; color: var(--quiet); margin-top: 2.5rem; }
-.case-summary { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-block: 1px solid var(--line); }
+.case-summary { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border-block: 1px solid var(--line); }
 .case-summary > div { padding: 1.8rem 2rem 2rem 0; }
 .case-summary > div + div { padding-left: 2rem; border-left: 1px solid var(--line); }
 .case-summary h2 { display: flex; gap: 1rem; font-size: .78rem; font-weight: 500; margin: 0 0 1rem; }
 .case-summary h2 span { color: var(--quiet); }
 .case-summary p { font-size: .83rem; color: var(--muted); margin: 0; }
+.case-summary strong { font-weight: 650; color: var(--ink); }
 .case-gallery { display: grid; gap: 3rem; margin: 3rem 0; }
 .case-gallery figure { margin: 0; min-width: 0; }
 .case-gallery a { display: block; }
@@ -592,31 +577,19 @@ a {
 .next-case a { display: flex; justify-content: space-between; gap: 2rem; margin-top: 1rem; text-decoration: none; font-size: clamp(1.3rem,3vw,2.5rem); letter-spacing: -.04em; }
 .about-copy .about-followup { margin-top: 1.2rem; }
 .about-links { display: flex; flex-wrap: wrap; gap: .7rem; }
-.experience-section { display: grid; grid-template-columns: minmax(8rem,.7fr) minmax(0,2.3fr); gap: clamp(2rem,7vw,7rem); padding-block: 3rem; border-bottom: 1px solid var(--line); }
-.experience-row { display: grid; grid-template-columns: 10rem minmax(0,1fr); gap: 2rem; padding-block: 1.8rem; border-bottom: 1px solid var(--line-soft); }
-.experience-row:first-child { padding-top: 0; }
-.experience-row:last-child { border: 0; }
-.experience-row > span { color: var(--quiet); font-size: .7rem; }
-.experience-row h2 { font-weight: 500; font-size: 1rem; margin: 0; }
-.experience-row p { color: var(--muted); font-size: .8rem; }
-.experience-row .experience-company { margin: .35rem 0 .7rem; color: var(--ink); }
 .contact-section { padding-block: 3rem; border-bottom: 1px solid var(--line); }
-.contact-section h2 { font-size: clamp(1.5rem,3vw,2.7rem); font-weight: 430; letter-spacing: -.05em; }
 @media(max-width:780px) {
  .case-row-copy { display: contents; }
  .case-row-copy h2 { grid-column: 1/-1; margin-bottom: 0; }
- .case-row-copy > p, .case-row-copy .case-role { grid-column: 1; }
- .case-row-copy .case-role { margin-top: 0; }
- .case-thumbnail { grid-column: 2; grid-row: 3 / span 2; align-self: start; }
+ .case-row-copy > p { grid-column: 1; }
+ .case-thumbnail { grid-column: 2; grid-row: 3; align-self: start; }
  .case-context { grid-column: 1/-1; display: flex; gap: .7rem; flex-wrap: wrap; align-items: baseline; }
  .case-context p { margin: 0; }
  .case-context > span:last-child { margin-left: auto; }
  .case-summary { grid-template-columns: 1fr; }
  .case-summary > div, .case-summary > div + div { padding: 1.5rem 0; border-left: 0; }
  .case-summary > div + div { border-top: 1px solid var(--line); }
- .experience-section { grid-template-columns: 1fr; }
  .case-facts { display: grid; }
- .experience-row { grid-template-columns: 1fr; gap: .7rem; }
  .site-nav, .header-right { gap: .9rem; }
  .site-nav a, .locale-nav a { font-size: .7rem; }
  .contact-section .text-link { overflow-wrap: anywhere; }
@@ -624,7 +597,7 @@ a {
 
 .media-caption-copy { flex: 1; }
 .media-source { display: block; margin-top: .4rem; color: var(--muted); text-underline-offset: .2rem; }
-.case-project-link { margin-block: 2.5rem; }
+.case-project-link { margin: 1.5rem 0 0; }
 
 .tool-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; align-items: start; }
 @media (max-width: 780px) {

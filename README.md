@@ -31,7 +31,7 @@ python3 -m pip install reportlab pypdf
 python3 scripts/build-cv.py
 ```
 
-The generator preserves the supplied PDF’s original artwork, embedded Cascadia fonts, photo, experience descriptions and project cards. It edits the bio and founder entry and restores the original pharmacy employment as the first Experience item, moving FPT to page two. Pharmacy education and pharmacy references outside that first role stay omitted. The reference stays in `content/cv/` and is never published. It produces the two-page `output/pdf/Jozef_Kovac_CV.pdf`, a text companion next to it, and keeps it outside the public website. The original supplied PDF is untouched. The CV is provided separately; the generator does not copy it into `public/`.
+The generator preserves the supplied PDF’s original artwork, embedded Cascadia fonts, photo, experience descriptions and project cards. It edits the bio and founder entry and places the original pharmacy employment last in Experience, after FPT, at the top of page two. Pharmacy education and pharmacy references outside that role stay omitted. The reference stays in `content/cv/` and is never published. It produces the two-page `output/pdf/Jozef_Kovac_CV.pdf`, a text companion next to it, and keeps it outside the public website. The original supplied PDF is untouched. The CV is provided separately; the generator does not copy it into `public/`.
 
 `node scripts/build-social-card.mjs` rebuilds the code-drawn social preview using Sharp, supplied with the current Next.js installation.
 

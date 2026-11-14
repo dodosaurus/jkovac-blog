@@ -20,7 +20,6 @@ export function CaseIndex({ studies, locale }: { studies: CaseSummary[]; locale:
               </Link>
             </h2>
             <p>{study.excerpt[locale]}</p>
-            <span className="reading-time case-role">{study.role[locale]}</span>
           </div>
           <div className="case-thumbnail">
             <Image src={study.thumbnail.src} alt={study.thumbnail.alt[locale]} width={720} height={450} loading={index === 0 ? "eager" : "lazy"} />

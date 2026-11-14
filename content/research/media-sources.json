@@ -72,10 +72,9 @@
     },
     {
       "file": "public/case-studies/uft-tool-reference.png",
-      "source": "https://www.calleosoftware.co.uk/wp-content/uploads/2023/02/Eight-myths-about-UFT-One-ebook-2021.pdf",
+      "source": "https://sdtimes.com/wp-content/uploads/2018/09/uft.png",
       "kind": "publisher-tool-reference",
-      "sha256": "16e82c1054c7ccf15f77070f9af8ee54202e383641c221a174b7f521fcd24c9f",
-      "page": 9
+      "sha256": "7e4d3fe4d7c035df87c4b52ad2f90dbf1c3695cf46657a5c5e9d511e975c0908"
     },
     {
       "file": "public/case-studies/cypress-tool-reference.png",

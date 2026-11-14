@@ -27,16 +27,6 @@ Profile
 Experience
 
 
-   Flying Pharmacist                                                                            July 2016 - August 2018
-
-   BENU  /  Slovakia
-   Regular pharmacist role, but moving between multiple locations - pharmacies where the company
-   had problems finding candidates or acute problems with vacancies. Actively worked on my PharmDr.
-   thesis during my years in pharmacy, and at the same time I did a lot of little programming
-   projects for my portfolio, which I later used to transfer to a more creative, project-based type
-   of work.
-
-
    Software Engineer                                                                                  May 2026 - Present
 
    HOTOVO  /  Košice, Slovakia
@@ -60,10 +50,7 @@ Experience
    volumes of test data, and supported QAs and business consultants on the project.
 
 
-
-Jozef Kovac                                                                                                         1 / 2
-
-Test Automation Engineer                                                                    August 2018 - November 2022
+   Test Automation Engineer                                                                 August 2018 - November 2022
 
    FPT Slovakia  /  Košice, Slovakia
    Multiple test automation roles over the years (for different levels of system) for an e-mobility
@@ -71,6 +58,21 @@ Test Automation Engineer                                                        
    Micro Focus UFT to Cypress through a proof of concept and team enablement.
 
 
+
+
+
+
+
+Jozef Kovac                                                                                                         1 / 2
+
+Flying Pharmacist                                                                               July 2016 - August 2018
+
+   BENU  /  Slovakia
+   Regular pharmacist role, but moving between multiple locations - pharmacies where the company
+   had problems finding candidates or acute problems with vacancies. Actively worked on my PharmDr.
+   thesis during my years in pharmacy, and at the same time I did a lot of little programming
+   projects for my portfolio, which I later used to transfer to a more creative, project-based type
+   of work.
 
 
 Selected public projects
