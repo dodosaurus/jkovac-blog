@@ -3,7 +3,7 @@
   "slug": "entry-generator",
   "order": 3,
   "client": "Protecht",
-  "period": "2024",
+  "period": "2025",
   "stack": [
     "Next.js",
     "Node.js",
