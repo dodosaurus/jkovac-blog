@@ -603,3 +603,248 @@ a {
 @media (max-width: 780px) {
   .tool-gallery { grid-template-columns: 1fr; }
 }
+
+.projects-section {
+  padding-block: clamp(3rem, 7vw, 6rem);
+  scroll-margin-top: 2rem;
+}
+
+.projects-heading {
+  margin-bottom: 3rem;
+}
+
+.projects-heading h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 430;
+  letter-spacing: -.055em;
+  line-height: 1.15;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem 2.5rem;
+}
+
+.project-card {
+  min-width: 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-screenshot {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 8 / 5;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  cursor: zoom-in;
+  transition: border-color 160ms ease;
+}
+
+.project-screenshot:hover,
+.project-screenshot:focus-visible {
+  border-color: var(--muted);
+}
+
+.project-screenshot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-enlarge {
+  position: absolute;
+  right: .65rem;
+  bottom: .65rem;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: var(--paper-deep);
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+.project-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .4rem 1rem;
+  margin-block: 1.4rem .8rem;
+}
+
+.project-title h2 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 430;
+  letter-spacing: -.045em;
+  line-height: 1.3;
+}
+
+.project-period {
+  color: var(--muted);
+  font-size: .72rem;
+  white-space: nowrap;
+}
+
+.project-description {
+  margin: 0;
+  color: var(--muted);
+  font-size: .83rem;
+  line-height: 1.75;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: .68rem;
+}
+
+.project-link {
+  display: inline-flex;
+  gap: .65rem;
+  margin-top: 1.2rem;
+  color: var(--muted);
+  font-size: .72rem;
+  text-underline-offset: .25rem;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  color: var(--ink);
+}
+
+.project-lightbox {
+  width: min(calc(100% - 2rem), 96rem);
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 0;
+  overflow: visible;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.project-lightbox::backdrop {
+  background: rgb(0 0 0 / .92);
+}
+
+.project-lightbox-panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  max-height: calc(100dvh - 2rem - 2px);
+}
+
+.project-lightbox-toolbar,
+.project-preview-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .75rem 1rem;
+}
+
+.project-lightbox-toolbar {
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-preview-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .4rem 1rem;
+  min-width: 0;
+}
+
+.project-preview-heading > span {
+  color: var(--muted);
+  font-size: .7rem;
+}
+
+.project-preview-heading h2 {
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 430;
+}
+
+.project-lightbox button {
+  flex-shrink: 0;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: .5rem .75rem;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: .75rem;
+  cursor: pointer;
+}
+
+.project-lightbox button:hover,
+.project-lightbox button:focus-visible {
+  border-color: var(--muted);
+  background: var(--surface);
+}
+
+.project-lightbox .project-close {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.project-preview-viewport {
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--paper-deep);
+}
+
+.project-preview-viewport img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 13rem);
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.project-preview-viewport.is-zoomed img {
+  max-width: none;
+  max-height: none;
+  margin: 0;
+}
+
+.project-preview-controls {
+  border-top: 1px solid var(--line);
+}
+
+.project-preview-controls > a {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: .7rem;
+  text-underline-offset: .2rem;
+}
+
+@media (max-width: 780px) {
+  .project-grid { grid-template-columns: 1fr; }
+  .projects-heading { margin-bottom: 2rem; }
+  .project-grid { gap: 2rem; }
+  .project-lightbox-toolbar,
+  .project-preview-controls { gap: .5rem; padding: .5rem; }
+  .project-preview-controls { flex-wrap: wrap; }
+  .project-preview-controls > a { order: 1; width: 100%; text-align: center; padding-block: .5rem; }
+  .project-preview-controls > button:last-child { margin-left: auto; }
+  .project-preview-viewport img { max-height: calc(100dvh - 16rem); }
+}

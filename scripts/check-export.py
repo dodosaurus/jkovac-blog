@@ -35,7 +35,9 @@ def target(url):
 
 assert OUT.is_dir(), 'Run npm run build first'
 slugs=['dentons-legal-ai','entry-generator','kiwigen','metax','cypress-migration']
-paths=['/','/about/']+[f'/case-studies/{slug}/' for slug in slugs]
+projects=json.loads((ROOT/'content/projects.json').read_text())
+assert len({project['id'] for project in projects})==len(projects),'Duplicate project IDs'
+paths=['/','/about/','/projects/']+[f'/case-studies/{slug}/' for slug in slugs]
 count=0
 for locale,prefix in [('en',''),('sk','/sk')]:
     for path in paths:
@@ -54,13 +56,34 @@ for locale,prefix in [('en',''),('sk','/sk')]:
             assert 'portfolio-intro' not in html and 'class="hero"' not in html,url
             assert 'tag-filter' not in html and 'article-tags' not in html and '?tag=' not in html,url
             assert html.count('class="article-row case-row"')==5,url
-            assert len(page.images)==5,(url,'Expected one thumbnail per case study')
-            for image in page.images:
+            case_images=[image for image in page.images if image['src'].startswith('/case-studies/')]
+            assert len(case_images)==5,(url,'Expected one thumbnail per case study')
+            assert len(page.images)==5 and 'id="projects"' not in html,(url,'Projects belong on their own page')
+            for image in case_images:
                 assert '/thumbnails/' in image['src'],(url,'Expected optimized miniature')
                 assert image.get('width')=='720' and image.get('height')=='450',url
             visible=' '.join(page.text)
             for client in ['Dentons Europe','HOTOVO','Protecht','METAX SK','Compleo']:
                 assert client in visible,(url,'Missing final client',client)
+        if path=='/projects/':
+            project_images=page.images
+            assert len(project_images)==len(projects),(url,'Expected one screenshot per personal project')
+            assert '<h1 id="projects-heading">Projects</h1>' in html,(url,'Expected a plain Projects title')
+            assert 'Side projects, experiments and websites I built.' not in html,url
+            assert 'Vlastné projekty, experimenty a weby, ktoré som vytvoril.' not in html,url
+            assert html.count('class="project-card"')==len(projects),url
+            assert f'{prefix}/projects/' in page.links,(url,'Missing Projects navigation')
+            assert 'aria-haspopup="dialog"' in html and '<dialog' in html,url
+            for project in projects:
+                assert project['title'] in ' '.join(page.text),(url,'Missing project',project['id'])
+                assert project['description'][locale] in ' '.join(page.text),url
+                assert project['image']['src'] in page.links,(url,'Missing full-size fallback')
+                assert not (OUT/'projects'/project['id']/'index.html').exists(),(url,'Unexpected project detail route')
+                for technology in project['technologies']:
+                    assert technology in ' '.join(page.text),url
+            for image in project_images:
+                assert '/thumbnails/' in image['src'],(url,'Expected optimized project screenshot')
+                assert image.get('width')=='960' and image.get('height')=='600',url
         assert page.lang==locale,(url,page.lang)
         assert page.h1s==1,(url,'H1 count',page.h1s)
         assert page.canonical=='https://www.jkovac.eu'+url,(url,page.canonical)
@@ -79,7 +102,7 @@ for locale,prefix in [('en',''),('sk','/sk')]:
             assert image.get('alt'),(url,'Missing image alt')
             assert target(image['src']).is_file(),(url,'Missing image',image['src'])
         count+=1
-for path in ['/en/','/en/about/']:
+for path in ['/en/','/en/about/','/en/projects/']:
     alias=Page(target(path).read_text())
     assert alias.canonical=='https://www.jkovac.eu'+path.replace('/en/','/'),path
 assert not (OUT/'blog').exists() and not (OUT/'en/blog').exists()
@@ -90,7 +113,8 @@ for source in (ROOT/'content/articles').glob('*.md'):
 sitemap=ET.parse(OUT/'sitemap.xml')
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 locations=[node.text for node in sitemap.findall('.//s:loc',ns)]
-assert len(locations)==14 and all('/blog/' not in url for url in locations)
+assert len(locations)==16 and all('/blog/' not in url for url in locations)
+assert 'https://www.jkovac.eu/projects/' in locations and 'https://www.jkovac.eu/sk/projects/' in locations
 assert not (OUT/'cv').exists() and not (ROOT/'public/cv').exists()
 assert not any(file.name.lower()=='jozef_kovac_cv.pdf' for file in OUT.rglob('*.pdf'))
-print(f'PASS: {count} canonical pages, 2 legacy aliases, local links/media/fragments, bilingual metadata, sitemap, two-part case studies with highlighted keywords, thumbnail list without tags/filters, no CV/diagrams/landing hero, and archive isolation.')
+print(f'PASS: {count} canonical pages, 3 English aliases, {len(projects)} bilingual personal projects on their own page, plain Projects title, full-size image fallbacks, local links/media/fragments, bilingual metadata, sitemap, two-part case studies with highlighted keywords, thumbnail list without tags/filters, no CV/diagrams/landing hero, and archive isolation.')

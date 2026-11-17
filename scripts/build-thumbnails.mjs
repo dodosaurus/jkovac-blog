@@ -17,3 +17,17 @@ for (const file of await fs.readdir(directory)) {
     .webp({ quality: 82 })
     .toFile(path.join(root, 'public/case-studies/thumbnails', `${data.slug}.webp`));
 }
+
+const projects = JSON.parse(await fs.readFile(path.join(root, 'content/projects.json'), 'utf8'));
+await fs.mkdir(path.join(root, 'public/projects/thumbnails'), { recursive: true });
+for (const project of projects) {
+  const source = path.join(root, 'public', project.image.src);
+  const metadata = await sharp(source).metadata();
+  if (metadata.width !== project.image.width || metadata.height !== project.image.height) {
+    throw new Error(`Incorrect screenshot dimensions for ${project.id}: ${metadata.width} × ${metadata.height}`);
+  }
+  await sharp(source)
+    .resize(960, 600, { fit: 'contain', background: '#171716' })
+    .webp({ quality: 85 })
+    .toFile(path.join(root, 'public/projects/thumbnails', `${project.id}.webp`));
+}

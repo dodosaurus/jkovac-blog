@@ -1,0 +1,174 @@
+[
+  {
+    "id": "rxops",
+    "title": "RxOps",
+    "period": "2026",
+    "description": {
+      "en": "A prototype for turning clinical context into structured AI prompts. I built a guided workbench for entering medicines and notes, choosing a task and reviewing the prompt before taking it into an AI tool. Case data stays in the browser tab, with local import and export.",
+      "sk": "Prototyp na prípravu štruktúrovaných promptov pre AI z klinického kontextu. Vytvoril som sprievodcu zadávaním liekov a poznámok, výberom úlohy a kontrolou promptu pred jeho prenesením do AI nástroja. Dáta prípadu zostávajú v karte prehliadača, s možnosťou lokálneho importu a exportu."
+    },
+    "technologies": ["Next.js", "React", "TypeScript", "Supabase"],
+    "image": {
+      "src": "/projects/rxops.jpg",
+      "width": 1265,
+      "height": 712,
+      "alt": {
+        "en": "RxOps workbench with medicine search and a clinical context form",
+        "sk": "Pracovná plocha RxOps s vyhľadávaním liekov a formulárom klinického kontextu"
+      }
+    }
+  },
+  {
+    "id": "materia-medica",
+    "title": "Materia Medica",
+    "period": "2026",
+    "description": {
+      "en": "An experimental drug-information assistant built around retrieval-augmented generation. I connected a chat interface to a pipeline for processing medicine documents, so answers could refer back to the source SPCs and show their citations alongside the conversation.",
+      "sk": "Experimentálny asistent na vyhľadávanie informácií o liekoch postavený na RAG. Chatové rozhranie som prepojil so spracovaním dokumentácie k liekom, aby odpovede mohli odkazovať na zdrojové SPC dokumenty a zobrazovať citácie priamo vedľa konverzácie."
+    },
+    "technologies": ["Next.js", "FastAPI", "Celery", "pgvector", "OpenAI API"],
+    "image": {
+      "src": "/projects/materia-medica.png",
+      "width": 3874,
+      "height": 2616,
+      "alt": {
+        "en": "Materia Medica chat interface with an answer and source-document citations",
+        "sk": "Chatové rozhranie Materia Medica s odpoveďou a citáciami zdrojových dokumentov"
+      }
+    }
+  },
+  {
+    "id": "dodo-recorder",
+    "title": "Dodo Recorder",
+    "period": "2025–2026",
+    "description": {
+      "en": "My original browser-session recorder, later developed as KiwiGen at HOTOVO. It brings browser actions, screenshots and spoken commentary onto one timeline, with local Whisper transcription. The exported session gives an AI agent context for writing automated tests.",
+      "sk": "Môj pôvodný nástroj na nahrávanie práce v prehliadači, neskôr rozvíjaný ako KiwiGen v HOTOVO. Spája akcie, screenshoty a hovorený komentár na jednej časovej osi s lokálnym prepisom cez Whisper. Export nahrávky poskytuje AI agentovi kontext na tvorbu automatizovaných testov."
+    },
+    "technologies": ["Electron", "TypeScript", "Playwright", "Whisper"],
+    "link": { "url": "https://github.com/hotovo/kiwigen", "label": { "en": "Now KiwiGen on GitHub", "sk": "Dnes KiwiGen na GitHube" } },
+    "image": {
+      "src": "/projects/dodo-recorder.png",
+      "width": 3580,
+      "height": 2120,
+      "alt": {
+        "en": "Original Dodo Recorder interface with recorded browser actions and a synchronized voice transcript",
+        "sk": "Pôvodné rozhranie Dodo Recorder so zaznamenanými akciami a synchronizovaným prepisom hlasu"
+      }
+    }
+  },
+  {
+    "id": "jmj-solution",
+    "title": "JMJ Solution",
+    "period": "2025",
+    "description": {
+      "en": "A company website for a steel construction and metalworking business. I built a clear presentation of its services and completed work, with a responsive layout and a direct route for prospective customers to get in touch.",
+      "sk": "Firemný web pre spoločnosť zameranú na oceľové konštrukcie a kovovýrobu. Pripravil som prehľadnú prezentáciu služieb a realizácií s responzívnym rozložením a jednoduchou cestou, ako môže záujemca firmu kontaktovať."
+    },
+    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    "link": { "url": "https://jmjsolution.sk", "label": { "en": "Visit website", "sk": "Otvoriť web" } },
+    "image": {
+      "src": "/projects/jmj-solution.png",
+      "width": 3160,
+      "height": 1920,
+      "alt": { "en": "JMJ Solution website with a welding photograph and steel construction services", "sk": "Web JMJ Solution s fotografiou zvárania a ponukou oceľových konštrukcií" }
+    }
+  },
+  {
+    "id": "metax-app",
+    "title": "METAX SK · mobile app",
+    "period": "2025",
+    "description": {
+      "en": "A mobile measuring tool for work with steel structures. Workers can organise jobs, enter dimensions for different geometric shapes and calculate their combined surface area. I also added report export so the measurements can leave the phone as a document.",
+      "sk": "Mobilný nástroj na meranie oceľových konštrukcií. Pracovníci si v ňom organizujú zákazky, zadávajú rozmery rôznych geometrických tvarov a počítajú ich celkovú plochu. Doplnil som aj export, aby sa merania dali z telefónu odovzdať ako dokument."
+    },
+    "technologies": ["Expo", "React Native", "TypeScript"],
+    "image": {
+      "src": "/projects/metax-app.png",
+      "width": 1682,
+      "height": 1187,
+      "alt": { "en": "Three METAX mobile views showing jobs, shape dimensions and report export", "sk": "Tri pohľady mobilnej aplikácie METAX so zákazkami, rozmermi tvaru a exportom" }
+    }
+  },
+  {
+    "id": "metax-web",
+    "title": "METAX SK · website",
+    "period": "2025",
+    "description": {
+      "en": "A friend's metal surface treatment company needed a straightforward website. I built a single-page presentation covering blasting, zinc coating and painting, with a work gallery and contact information that customers can find quickly.",
+      "sk": "Kamarátova firma na povrchovú úpravu kovov potrebovala jednoduchý web. Vytvoril som jednostránkovú prezentáciu trýskania, metalizácie a náterov s galériou realizácií a kontaktmi, ktoré zákazník nemusí dlho hľadať."
+    },
+    "technologies": ["Next.js", "React", "Tailwind CSS", "shadcn/ui"],
+    "link": { "url": "https://www.metaxsk.sk", "label": { "en": "Visit website", "sk": "Otvoriť web" } },
+    "image": {
+      "src": "/projects/metax-web.png",
+      "width": 1579,
+      "height": 1187,
+      "alt": { "en": "METAX website presenting metal surface treatment services and its work process", "sk": "Web METAX predstavujúci služby povrchovej úpravy kovov a pracovný postup" }
+    }
+  },
+  {
+    "id": "endurance-legends",
+    "title": "Endurance Legends",
+    "period": "2024",
+    "description": {
+      "en": "A side project combining my interest in endurance sport and collectible cards. Activities imported from Strava earn in-app currency, which athletes can spend on card packs to build a collection. I worked on the Strava connection, activity dashboard and card-collecting flow.",
+      "sk": "Vlastný projekt, v ktorom som spojil vytrvalostný šport a zberateľské karty. Aktivity zo Stravy prinášajú hernú menu, za ktorú si športovec otvára balíčky a rozširuje zbierku. Venoval som sa prepojeniu so Stravou, prehľadu aktivít a zbieraniu kariet."
+    },
+    "technologies": ["Next.js", "Tailwind CSS", "shadcn/ui", "Prisma", "Strava API"],
+    "image": {
+      "src": "/projects/endurance-legends.png",
+      "width": 3428,
+      "height": 2672,
+      "alt": { "en": "Endurance Legends landing page with Strava sign-in and collectible sports cards", "sk": "Úvodná stránka Endurance Legends s prihlásením cez Stravu a športovými kartami" }
+    }
+  },
+  {
+    "id": "miners-reporter",
+    "title": "2Miners Reporter",
+    "period": "2023",
+    "description": {
+      "en": "A reporting dashboard I made for my own mining machine. A Node.js service periodically fetched data from a third-party API, while the React interface turned the stored readings into charts so I could follow performance over time.",
+      "sk": "Reportovací dashboard, ktorý som si vytvoril pre vlastný ťažobný počítač. Node.js služba pravidelne získavala dáta z externého API a React rozhranie ich zobrazovalo v grafoch, aby som vedel sledovať vývoj výkonu v čase."
+    },
+    "technologies": ["React", "Node.js", "Firebase", "Bulma", "Axios"],
+    "image": {
+      "src": "/projects/miners-reporter.png",
+      "width": 1190,
+      "height": 853,
+      "alt": { "en": "2Miners Reporter dashboard with historical mining performance charts", "sk": "Dashboard 2Miners Reporter s historickými grafmi výkonu ťažby" }
+    }
+  },
+  {
+    "id": "gatsby-portfolio",
+    "title": "First Portfolio",
+    "period": "2021",
+    "description": {
+      "en": "An early version of my personal portfolio and a place to learn by building. I used Gatsby to explore static site generation and connected Contentful so I could manage content separately from the frontend.",
+      "sk": "Jedna z prvých verzií môjho portfólia, na ktorej som sa učil nové technológie v praxi. Cez Gatsby som skúšal generovanie statických stránok a prepojil som ho s Contentful, aby sa obsah dal spravovať oddelene od frontendu."
+    },
+    "technologies": ["Gatsby", "React", "Tailwind CSS", "Contentful"],
+    "image": {
+      "src": "/projects/gatsby-portfolio.png",
+      "width": 1207,
+      "height": 854,
+      "alt": { "en": "My first portfolio with separate paths for test automation and personal projects", "sk": "Moje prvé portfólio s rozdelením na test automation a osobné projekty" }
+    }
+  },
+  {
+    "id": "chlebiatko-blog",
+    "title": "Chlebiatko Blog",
+    "period": "2021",
+    "description": {
+      "en": "A small baking blog for my wife. Alongside the public recipe feed, I built an administration mode for adding, editing and deleting posts, using Firebase for the backend and Redux for application state.",
+      "sk": "Malý blog o pečení pre moju manželku. Okrem verejného zoznamu receptov som vytvoril vlastnú administráciu na pridávanie, úpravu a mazanie článkov, s Firebase na backende a Reduxom na správu stavu aplikácie."
+    },
+    "technologies": ["React", "Firebase", "Redux", "Thunk", "Bulma"],
+    "image": {
+      "src": "/projects/chlebiatko-blog.png",
+      "width": 1256,
+      "height": 957,
+      "alt": { "en": "Chlebiatko baking blog with recipe photographs, categories and article previews", "sk": "Blog Chlebiatko s fotografiami receptov, kategóriami a náhľadmi článkov" }
+    }
+  }
+]

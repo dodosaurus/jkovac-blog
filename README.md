@@ -20,6 +20,8 @@ Next.js 16.3.3 produces a static site in `out/`. Read its bundled docs before ch
 ## Content
 
 - `content/case-studies/`: five editable bilingual Markdown case studies. See its README for the writing style and media details.
+- `content/projects.json`: ten personal projects, newest first, on `/projects/` and `/sk/projects/` (with `/en/projects/` as an English alias), with EN/SK descriptions, approximate main development years, technologies and screenshots. `public/projects/` keeps the full-size images; the build generates contained WebP previews in `public/projects/thumbnails/`. Screenshot links open a shared native dialog with keyboard navigation, original-size zoom and an original-image fallback. Individual projects have no detail routes.
+- `content/research/projects-sources.md` and `project-media-sources.json`: project research, date discrepancies and screenshot provenance; excluded from the published site.
 - `content/articles/`: original blog Markdown, preserved as an unpublished archive. No blog routes or sitemap entries are generated. Former public blog images are archived under `content/articles/assets/`; Markdown and archive files are never copied into `out/`.
 - `content/research/portfolio-notes.md`: internal source notes and follow-up questions, excluded from the site.
 - `content/cv/cv.en.json`: the bio/founder edits applied to the original attached CV. `content/cv/reference.pdf` preserves the original artwork privately.

@@ -1,0 +1,88 @@
+{
+  "collected_on": "2026-11-17",
+  "sources": [
+    {
+      "file": "public/projects/rxops.jpg",
+      "source": "/Users/dodo/LOCAL/personal/pharma-ai/rxops",
+      "kind": "browser-capture-of-existing-local-production-build",
+      "sha256": "90078df9c5040b48cbd8c069d78b3aab65362f0906e64f9c9ef578c8513a3f16",
+      "width": 1265,
+      "height": 712,
+      "captured_on": "2026-11-17",
+      "url": "http://127.0.0.1:3014/",
+      "context": "Clean empty workbench. No case data entered, no search submitted. Served the existing production build without changing source files."
+    },
+    {
+      "file": "public/projects/materia-medica.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/materiaMedica.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "131d8e56ff28bc05f7476c708ddb4c04b35c00a048caa41212fe0c3408d4d896",
+      "width": 3874,
+      "height": 2616
+    },
+    {
+      "file": "public/projects/dodo-recorder.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/dodoRecorder.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "c5f8a0d04c767715d7c8a3874cab731e61ea1cbf77ab54ef5654508db962ed73",
+      "width": 3580,
+      "height": 2120
+    },
+    {
+      "file": "public/projects/jmj-solution.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/jmjSolution.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "d2e1debb102d13bebcc1b2d9a0cf78df9d5c74dbfec922fc4a5849fd40629698",
+      "width": 3160,
+      "height": 1920
+    },
+    {
+      "file": "public/projects/metax-app.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/metaxApp.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "64c7de3adb6cfc40e728fa348b80a73ea696e0a14799a9f2065af4186ad57c83",
+      "width": 1682,
+      "height": 1187
+    },
+    {
+      "file": "public/projects/metax-web.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/metaxWeb.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "faaa0fc94078d400eeba48d3d73e16d1a907bcd9ea48a8ce05ed95cbd80a827c",
+      "width": 1579,
+      "height": 1187
+    },
+    {
+      "file": "public/projects/endurance-legends.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/enduranceLegends.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "a561e221c66fa3fae1ab3591b3f7a5ffc52cd108df86880b95c9f177fc2622fe",
+      "width": 3428,
+      "height": 2672
+    },
+    {
+      "file": "public/projects/miners-reporter.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/minersReporter.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "559ace87e800b2ac15cea583f34fca7189dd94072780bb4a0065e5c8cc1bfbc5",
+      "width": 1190,
+      "height": 853
+    },
+    {
+      "file": "public/projects/gatsby-portfolio.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/gatsbyPortfolio.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "18a30b6d054ae870e873f49df975cd322b9dc0430b52ee8acbb49ff9c122c5c9",
+      "width": 1207,
+      "height": 854
+    },
+    {
+      "file": "public/projects/chlebiatko-blog.png",
+      "source": "/Users/dodo/LOCAL/personal/jkovac/assets/chlebiatkoBlog.png",
+      "kind": "existing-portfolio-screenshot",
+      "sha256": "cb85e004ad4cd95c8746b414e9833053174b25fdb288512160c7b25085167375",
+      "width": 1256,
+      "height": 957
+    }
+  ]
+}

@@ -12,6 +12,7 @@ export function HomePage({ locale }: { locale: Locale }) {
       <h1 className="sr-only">{locale === "en" ? "Jozef Kováč — software engineering and SDET case studies" : "Jozef Kováč — case studies zo softvérového vývoja a testovania"}</h1>
       <section className="shell articles-section" id="work" aria-label={text.studies}>
         <CaseIndex studies={studies} locale={locale} />
-      </section></main>
+      </section>
+    </main>
   </>;
 }
